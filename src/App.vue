@@ -1,14 +1,16 @@
 <template>
+	<header-page/>
 	<main-teams/>
 </template>
 
 <script>
 
 import MainTeams from "@/components/MainTeams/MainTeams.vue";
+import HeaderPage from "@/components/Header/HeaderPage.vue";
 
 export default {
 	name: 'App',
-	components: {MainTeams},
+	components: {HeaderPage, MainTeams},
 	
 }
 </script>
@@ -29,6 +31,7 @@ body {
 	width: 100vw;
 	font-family: "TT Runs", sans-serif;
 	overflow-x: hidden;
+	background: black;
 }
 
 #app {
@@ -39,7 +42,7 @@ body {
 .container {
 	max-width: 1720px;
 	margin: 0 auto;
-	padding: 0 1rem;
+	padding: 0 2rem;
 }
 
 </style>

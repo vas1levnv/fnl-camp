@@ -90,7 +90,7 @@ export default {
 		top: -80%;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 20%;
+		width: 20vw;
 		
 		svg {
 			width: 100%;

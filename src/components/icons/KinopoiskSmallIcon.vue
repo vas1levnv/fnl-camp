@@ -36,7 +36,7 @@
 
 <script>
 export default {
-	name: "KinopoiskIcon"
+	name: "KinopoiskSmallIcon"
 }
 </script>
 
