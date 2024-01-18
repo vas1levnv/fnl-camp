@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<main-teams/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import MainTeams from "@/components/MainTeams/MainTeams.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {MainTeams},
+	
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+
+@import "@/assets/main.css";
+@import "@/assets/fonts/ttruns/style.css";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
+
+body {
+	min-height: 100vh;
+	width: 100vw;
+	font-family: "TT Runs", sans-serif;
+	overflow-x: hidden;
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	max-width: 1720px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
 </style>

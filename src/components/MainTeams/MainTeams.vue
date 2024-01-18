@@ -1,0 +1,100 @@
+<template>
+	<div class="teams" :style="{ 'background-image': 'url(' + banner + ')' }">
+		<div class="teams-wrapper">
+			<div class="container">
+				<div class="teams-list">
+					<div class="teams-list__left">
+						<div class="teams-img"><img :src="enisei" alt="enisei"></div>
+						<div class="teams-img"><img :src="spartak" alt="spartak"></div>
+						<div class="teams-img"><img :src="bbTeam" alt="bbTeam"></div>
+					</div>
+					<div class="teams-icon">
+						<kinopoisk-icon/>
+					</div>
+					<div class="teams-list__right">
+						<div class="teams-img"><img :src="rodina" alt="rodina"></div>
+						<div class="teams-img"><img :src="amkal" alt="amkal"></div>
+						<div class="teams-img"><img :src="petropavl" alt="petropavl"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<script>
+import bannerImg from '@/assets/img/main-stadium.png'
+import enisei from '@/assets/img/Enisei.png'
+import amkal from '@/assets/img/Amkal.png'
+import bbTeam from '@/assets/img/bb.png'
+import rodina from '@/assets/img/rodina.png'
+import petropavl from '@/assets/img/petropavl.png'
+import spartak from '@/assets/img/spartak.png'
+import KinopoiskIcon from "@/components/icons/KinopoiskIcon.vue";
+
+export default {
+	name: "main-teams",
+	components: {KinopoiskIcon},
+	
+	data() {
+		return {
+			banner: bannerImg,
+			enisei: enisei,
+			amkal: amkal,
+			bbTeam: bbTeam,
+			rodina: rodina,
+			petropavl: petropavl,
+			spartak: spartak,
+		}
+	}
+}
+</script>
+
+<style scoped lang="scss">
+.teams {
+	height: 100vh;
+	display: flex;
+	align-items: flex-end;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	
+	&-wrapper {
+		position: relative;
+		width: 100%;
+		background: var(--linear-gradient);
+		
+	}
+	
+	&-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		padding: 7.5rem 0;
+		
+		&__left, &__right {
+			display: flex;
+			justify-content: space-between;
+			gap: 2rem;
+			width: 30%;
+			
+			img {
+				width: 100%;
+			}
+		}
+	}
+	
+	&-icon {
+		position: absolute;
+		top: -80%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 20%;
+		
+		svg {
+			width: 100%;
+		}
+	}
+}
+</style>
