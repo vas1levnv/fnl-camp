@@ -120,6 +120,11 @@ export default {
 
 @media (max-width: 1024px) {
 	.winners {
+		
+		&-wrapper {
+			padding: 3rem 0 5rem;
+		}
+		
 		&-text {
 			font-size: 1.5rem;
 		}
