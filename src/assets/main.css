@@ -1,3 +1,16 @@
-:root{
+:root {
 	--linear-gradient: radial-gradient(149.6% 157.97% at -8.9% 0%, #EA571C 0%, #EA571C 60%, #B9CE00 99.97%, #B9CE00 100%);
+	--orange: #EA571C;
+}
+
+h2 {
+	font-size: 4rem;
+	font-weight: 700;
+	color: var(--orange);
+}
+
+@media (max-width: 1024px) {
+	h2{
+		font-size: 2.5rem;
+	}
 }

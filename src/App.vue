@@ -1,16 +1,18 @@
 <template>
 	<header-page/>
 	<main-teams/>
+	<winners-section/>
 </template>
 
 <script>
 
 import MainTeams from "@/components/MainTeams/MainTeams.vue";
 import HeaderPage from "@/components/Header/HeaderPage.vue";
+import WinnersSection from "@/components/WinnersSection/WinnersSection.vue";
 
 export default {
 	name: 'App',
-	components: {HeaderPage, MainTeams},
+	components: {WinnersSection, HeaderPage, MainTeams},
 	
 }
 </script>
@@ -18,7 +20,7 @@ export default {
 <style lang="scss">
 
 @import "@/assets/main.css";
-@import "@/assets/fonts/ttruns/style.css";
+@import "@/assets/fonts/ttruns/stylesheet.css";
 
 * {
 	padding: 0;
@@ -32,6 +34,7 @@ body {
 	font-family: "TT Runs", sans-serif;
 	overflow-x: hidden;
 	background: black;
+	color: white;
 }
 
 #app {

@@ -23,6 +23,7 @@ export default {
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 100;
 	
 	&-wrapper {
 		padding: 3.6rem 0;
