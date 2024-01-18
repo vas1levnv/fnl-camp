@@ -6,11 +6,11 @@
 					<div class="descr-item" v-for="item in teams" :key="item.id">
 						<div class="descr-item__img"><img :src="item.src" alt="item.name"></div>
 						<div class="descr-item__content">
-							<div>{{ item.name }}</div>
-							<div>Год основания - {{ item.year }}</div>
-							<div v-if="item.championship">Чемпионат - {{ item?.championship }}</div>
+							<div class="descr-item__name">{{ item.name }}</div>
+							<div class="descr-item__year">Год основания - {{ item.year }}</div>
+							<div class="descr-item__championship" v-if="item.championship">Чемпионат - {{ item?.championship }}</div>
 							<div>{{ item.description }}</div>
-							<div>
+							<div class="descr-item__achievements">
 								<div>Достижения</div>
 								<ul>
 									<li v-for="el in item.achievements" :key="el.id">
@@ -18,7 +18,7 @@
 									</li>
 								</ul>
 							</div>
-							<div>
+							<div class="descr-item__persons">
 								<div>Главные лица</div>
 								<div v-for="person in item.persons" :key="person.id">
 									<img :src="person.src" :alt="person.name">
