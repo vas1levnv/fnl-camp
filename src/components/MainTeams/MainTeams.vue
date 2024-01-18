@@ -60,6 +60,16 @@ export default {
 	background-position: bottom;
 	background-size: cover;
 	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.00) 53.81%), linear-gradient(0deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.48) 100%);
+	}
+	
 	&-wrapper {
 		position: relative;
 		width: 100%;
