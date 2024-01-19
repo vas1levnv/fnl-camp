@@ -88,11 +88,11 @@ table {
 	
 	
 	tr {
-		&:nth-child(odd) {
+		&:nth-child(even) {
 			background: var(--orange);
 		}
 		
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			background: #FFCEBA;
 		}
 		

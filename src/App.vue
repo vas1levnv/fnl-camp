@@ -6,6 +6,7 @@
 	<video-redirect/>
 	<teams-description/>
 	<map-section/>
+	<about-stadium/>
 </template>
 
 <script>
@@ -17,10 +18,14 @@ import TeamsDescription from "@/components/TeamsDescription/TeamsDescription.vue
 import MapSection from "@/components/MapSection/MapSection.vue";
 import VideoRedirect from "@/components/VideoRedirect/VideoRedirect.vue";
 import TeamsInfo from "@/components/TeamsInfo/TeamsInfo.vue";
+import AboutStadium from "@/components/AboutStadium/AboutStadium.vue";
 
 export default {
 	name: 'App',
-	components: {TeamsInfo, VideoRedirect, MapSection, TeamsDescription, WinnersSection, HeaderPage, MainTeams},
+	components: {
+		AboutStadium,
+		TeamsInfo, VideoRedirect, MapSection, TeamsDescription, WinnersSection, HeaderPage, MainTeams
+	},
 	
 }
 </script>
