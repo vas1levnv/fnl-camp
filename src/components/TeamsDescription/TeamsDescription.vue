@@ -316,6 +316,7 @@ export default {
 				margin: 0.5rem auto 0;
 				width: 100px;
 				text-align: center;
+				font-size: 1rem;
 			}
 		}
 	}

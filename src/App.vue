@@ -3,6 +3,7 @@
 	<main-teams/>
 	<winners-section/>
 	<teams-description/>
+	<map-section/>
 </template>
 
 <script>
@@ -11,10 +12,11 @@ import MainTeams from "@/components/MainTeams/MainTeams.vue";
 import HeaderPage from "@/components/Header/HeaderPage.vue";
 import WinnersSection from "@/components/WinnersSection/WinnersSection.vue";
 import TeamsDescription from "@/components/TeamsDescription/TeamsDescription.vue";
+import MapSection from "@/components/MapSection/MapSection.vue";
 
 export default {
 	name: 'App',
-	components: {TeamsDescription, WinnersSection, HeaderPage, MainTeams},
+	components: {MapSection, TeamsDescription, WinnersSection, HeaderPage, MainTeams},
 	
 }
 </script>
