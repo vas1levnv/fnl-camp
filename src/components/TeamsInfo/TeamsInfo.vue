@@ -3,6 +3,7 @@
 		<div class="container">
 			<teams-detail :teamsFirst="teamsFirst" :teamsSecond="teamsSecond"/>
 			<teams-table :teamsFirst="teamsFirst" :teamsSecond="teamsSecond"/>
+			<calendar-section/>
 		</div>
 	</div>
 </template>
@@ -16,10 +17,11 @@ import bb from "@/assets/img/bb.png";
 import rodina from "@/assets/img/rodina.png";
 import amkal from "@/assets/img/Amkal.png";
 import petropavl from "@/assets/img/petropavl.png";
+import CalendarSection from "@/components/TeamsInfo/TeamsCalendar/CalendarSection.vue";
 
 export default {
 	name: "TeamsInfo",
-	components: {TeamsTable, TeamsDetail},
+	components: {CalendarSection, TeamsTable, TeamsDetail},
 	data() {
 		return {
 			teamsFirst: [
