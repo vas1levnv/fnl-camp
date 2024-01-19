@@ -31,6 +31,7 @@ export default {
 	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
+	min-height: 800px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;

@@ -54,6 +54,7 @@ export default {
 <style scoped lang="scss">
 .teams {
 	height: 100vh;
+	min-height: 800px;
 	display: flex;
 	align-items: flex-end;
 	background-repeat: no-repeat;
