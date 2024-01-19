@@ -2,6 +2,7 @@
 	<header-page/>
 	<main-teams/>
 	<winners-section/>
+	<video-redirect/>
 	<teams-description/>
 	<map-section/>
 </template>
@@ -13,10 +14,11 @@ import HeaderPage from "@/components/Header/HeaderPage.vue";
 import WinnersSection from "@/components/WinnersSection/WinnersSection.vue";
 import TeamsDescription from "@/components/TeamsDescription/TeamsDescription.vue";
 import MapSection from "@/components/MapSection/MapSection.vue";
+import VideoRedirect from "@/components/VideoRedirect/VideoRedirect.vue";
 
 export default {
 	name: 'App',
-	components: {MapSection, TeamsDescription, WinnersSection, HeaderPage, MainTeams},
+	components: {VideoRedirect, MapSection, TeamsDescription, WinnersSection, HeaderPage, MainTeams},
 	
 }
 </script>
