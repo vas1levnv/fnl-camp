@@ -51,6 +51,8 @@ export default {
 		
 		&__name {
 			flex: 1 1 0;
+			font-size: 2.25rem;
+			font-weight: 500;
 		}
 	}
 }
@@ -60,6 +62,16 @@ export default {
 		&__title {
 			font-size: 2.5rem;
 			margin-bottom: 2.5rem;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.teams-detail {
+		&-item {
+			&__name {
+				font-size: 1.75rem;
+			}
 		}
 	}
 }
@@ -77,6 +89,10 @@ export default {
 			&__img {
 				width: 70px;
 				height: 70px;
+			}
+			
+			&__name{
+				font-size: 1.25rem;
 			}
 		}
 	}

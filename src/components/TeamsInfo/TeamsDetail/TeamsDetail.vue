@@ -23,6 +23,12 @@ export default {
 	gap: 6rem;
 }
 
+@media (max-width: 1200px) {
+	.teams-detail {
+		gap: 3rem;
+	}
+}
+
 @media (max-width: 1024px) {
 	.teams-detail {
 		grid-template-columns: 1fr;

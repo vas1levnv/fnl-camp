@@ -7,6 +7,8 @@
 	<teams-description/>
 	<map-section/>
 	<about-stadium/>
+	<sponsors-section/>
+	<footer-page/>
 </template>
 
 <script>
@@ -19,10 +21,14 @@ import MapSection from "@/components/MapSection/MapSection.vue";
 import VideoRedirect from "@/components/VideoRedirect/VideoRedirect.vue";
 import TeamsInfo from "@/components/TeamsInfo/TeamsInfo.vue";
 import AboutStadium from "@/components/AboutStadium/AboutStadium.vue";
+import SponsorsSection from "@/components/SponsorsSection/SponsorsSection.vue";
+import FooterPage from "@/components/Footer/FooterPage.vue";
 
 export default {
 	name: 'App',
 	components: {
+		FooterPage,
+		SponsorsSection,
 		AboutStadium,
 		TeamsInfo, VideoRedirect, MapSection, TeamsDescription, WinnersSection, HeaderPage, MainTeams
 	},

@@ -143,6 +143,10 @@ export default {
 			row-gap: 2rem;
 		}
 		
+		h2{
+			font-size: 2rem;
+		}
+		
 		&-item {
 			&:last-child {
 				grid-column: 1/3;

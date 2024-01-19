@@ -29,4 +29,21 @@ export default {
 		padding: 3.6rem 0;
 	}
 }
+
+@media (max-width: 1024px) {
+	.header {
+		&-wrapper {
+			padding: 2rem 0;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		&-wrapper {
+			padding: 1rem 0;
+		}
+	}
+}
+
 </style>
