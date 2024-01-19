@@ -107,4 +107,65 @@ export default {
 		}
 	}
 }
+
+
+@media (max-width: 1024px) {
+	.teams {
+		&-list {
+			flex-direction: column;
+			padding: 7.5rem 0 5rem;
+			
+			&__left, &__right {
+				width: 100%;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				
+				img {
+					width: auto;
+					max-width: 100%;
+					object-fit: contain;
+					max-height: 100%;
+				}
+				
+			}
+			
+			&__left {
+				margin-bottom: 2rem;
+			}
+		}
+		
+		&-img {
+			display: flex;
+			justify-content: center;
+			max-height: 100px;
+		}
+		
+		&-icon {
+			top: -70%;
+			width: 200px;
+		}
+	}
+	
+}
+
+@media (max-width: 576px) {
+	.teams {
+		&-list {
+			padding: 5rem 0 2rem;
+			
+			&__left, &__right {
+				grid-template-columns: 3fr 4fr 3fr;
+			}
+		}
+		
+		&-img {
+			max-height: 70px;
+		}
+		
+		&-icon {
+			top: -105%;
+			width: 150px;
+		}
+	}
+}
 </style>
