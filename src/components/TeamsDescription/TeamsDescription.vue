@@ -308,17 +308,63 @@ export default {
 		&__persons {
 			&-list {
 				display: flex;
-				align-items: center;
 				gap: 1.25rem;
 				margin-top: 1.25rem;
 			}
 			
 			&-name {
 				margin: 0.5rem auto 0;
-				width: min-content;
+				width: 100px;
 				text-align: center;
 			}
 		}
 	}
 }
+
+
+@media (max-width: 1200px) {
+	.descr {
+		&-item {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.descr {
+		&-item {
+			flex-direction: column-reverse;
+			gap: 2rem;
+			margin-bottom: 2rem;
+			
+			&:nth-child(2n) {
+				flex-direction: column-reverse;
+			}
+			
+			&__img {
+				max-width: 300px;
+			}
+			
+			&__content {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.descr {
+		&-item {
+			&__persons {
+				&-list {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 1.25rem;
+					margin-top: 1.25rem;
+				}
+			}
+		}
+	}
+}
+
 </style>
