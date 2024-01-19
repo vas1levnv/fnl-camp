@@ -33,6 +33,9 @@ export default {
 	height: 100vh;
 	background-repeat: no-repeat;
 	background-size: cover;
+	text-align: center;
+	padding: 0 2rem;
+	background-position: center;
 	
 	h3 {
 		margin-top: 7rem;
@@ -42,6 +45,16 @@ export default {
 	
 	&-text {
 		margin-bottom: 0.75rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.video {
+		h3 {
+			font-size: 2rem;
+			max-width: 100%;
+			margin: 3rem 0 1rem;
+		}
 	}
 }
 </style>
