@@ -19,4 +19,12 @@ export default {
 	bottom: 3rem;
 	right: 3rem;
 }
+
+@media (max-width: 768px) {
+	.move-to-top{
+		bottom: 1rem;
+		right: 1rem;
+	}
+}
+
 </style>
