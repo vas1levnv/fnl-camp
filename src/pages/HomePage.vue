@@ -10,7 +10,6 @@
 </template>
 
 <script setup>
-
 import MainTeams from "@/components/HomeView/MainTeams/MainTeams.vue";
 import TeamsInfo from "@/components/HomeView/TeamsInfo/TeamsInfo.vue";
 import WinnersSection from "@/components/HomeView/WinnersSection/WinnersSection.vue";

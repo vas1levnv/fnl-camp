@@ -8,6 +8,7 @@
 </template>
 
 <script setup>
+
 </script>
 
 <style scoped>
@@ -18,9 +19,14 @@
 }
 
 @media (max-width: 768px) {
-	.move-to-top{
+	.move-to-top {
 		bottom: 1rem;
 		right: 1rem;
+		
+		svg {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
 	}
 }
 

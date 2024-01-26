@@ -38,7 +38,7 @@ import YoutubeIcon from "@/components/icons/YoutubeIcon.vue";
 	&-wrapper {
 		display: flex;
 		justify-content: space-between;
-		align-items: end;
+		align-items: flex-end;
 		height: 40vh;
 		min-height: 380px;
 		padding: 5rem 0;

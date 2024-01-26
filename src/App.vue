@@ -5,20 +5,10 @@
 	<move-to-top/>
 </template>
 
-<script>
+<script setup>
 import HeaderPage from "@/components/Header/HeaderPage.vue";
 import FooterPage from "@/components/Footer/FooterPage.vue";
-import MoveToTop from "@/components/MoveToTop/MoveToTop.vue";
-
-export default {
-	name: 'App',
-	components: {
-		MoveToTop,
-		FooterPage,
-		HeaderPage
-	},
-	
-}
+import MoveToTop from "@/components/UI/MoveToTop/MoveToTop.vue";
 </script>
 
 <style lang="scss">
