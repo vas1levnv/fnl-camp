@@ -9,29 +9,16 @@
 	<sponsors-section/>
 </template>
 
-<script>
-import TeamsDescription from "@/components/TeamsDescription/TeamsDescription.vue";
-import MapSection from "@/components/MapSection/MapSection.vue";
-import SponsorsSection from "@/components/SponsorsSection/SponsorsSection.vue";
-import AboutStadium from "@/components/AboutStadium/AboutStadium.vue";
-import MainTeams from "@/components/MainTeams/MainTeams.vue";
-import WinnersSection from "@/components/WinnersSection/WinnersSection.vue";
-import VideoRedirect from "@/components/VideoRedirect/VideoRedirect.vue";
-import TeamsInfo from "@/components/TeamsInfo/TeamsInfo.vue";
+<script setup>
 
-export default {
-	name: "HomePage",
-	components: {
-		TeamsInfo,
-		VideoRedirect,
-		WinnersSection,
-		MainTeams,
-		AboutStadium,
-		SponsorsSection,
-		MapSection,
-		TeamsDescription
-	}
-}
+import MainTeams from "@/components/HomeView/MainTeams/MainTeams.vue";
+import TeamsInfo from "@/components/HomeView/TeamsInfo/TeamsInfo.vue";
+import WinnersSection from "@/components/HomeView/WinnersSection/WinnersSection.vue";
+import VideoRedirect from "@/components/HomeView/VideoRedirect/VideoRedirect.vue";
+import TeamsDescription from "@/components/HomeView/TeamsDescription/TeamsDescription.vue";
+import MapSection from "@/components/HomeView/MapSection/MapSection.vue";
+import AboutStadium from "@/components/HomeView/AboutStadium/AboutStadium.vue";
+import SponsorsSection from "@/components/HomeView/SponsorsSection/SponsorsSection.vue";
 </script>
 
 <style scoped>

@@ -7,7 +7,8 @@
 </template>
 
 <script setup>
-import TeamsTableItem from "@/components/TeamsInfo/TeamsTable/TeamsTableItem.vue";
+import TeamsTableItem from "@/components/HomeView/TeamsInfo/TeamsTable/TeamsTableItem.vue";
+
 const props = defineProps(['teamsFirst', 'teamsSecond'])
 </script>
 

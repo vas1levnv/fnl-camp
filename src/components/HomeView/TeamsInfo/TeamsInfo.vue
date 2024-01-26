@@ -9,10 +9,10 @@
 </template>
 
 <script setup>
-import TeamsDetail from "@/components/TeamsInfo/TeamsDetail/TeamsDetail.vue";
-import TeamsTable from "@/components/TeamsInfo/TeamsTable/TeamsTable.vue";
-import CalendarSection from "@/components/TeamsInfo/TeamsCalendar/CalendarSection.vue";
 import {useStore} from "vuex";
+import TeamsDetail from "@/components/HomeView/TeamsInfo/TeamsDetail/TeamsDetail.vue";
+import TeamsTable from "@/components/HomeView/TeamsInfo/TeamsTable/TeamsTable.vue";
+import CalendarSection from "@/components/HomeView/TeamsInfo/TeamsCalendar/CalendarSection.vue";
 
 const store = useStore()
 

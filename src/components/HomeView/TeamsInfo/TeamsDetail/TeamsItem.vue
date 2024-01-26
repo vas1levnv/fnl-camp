@@ -15,12 +15,6 @@
 import CustomButton from "@/components/UI/CustomButton.vue";
 
 const props = defineProps(['title', 'teams'])
-
-// export default {
-// 	name: "TeamsItem",
-// 	components: {CustomButton},
-// 	props: ['title', 'teams']
-// }
 </script>
 
 <style scoped lang="scss">

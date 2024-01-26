@@ -6,7 +6,8 @@
 </template>
 
 <script setup>
-import TeamsItem from "@/components/TeamsInfo/TeamsDetail/TeamsItem.vue";
+import TeamsItem from "@/components/HomeView/TeamsInfo/TeamsDetail/TeamsItem.vue";
+
 const props = defineProps(['teamsFirst', 'teamsSecond'])
 
 </script>
