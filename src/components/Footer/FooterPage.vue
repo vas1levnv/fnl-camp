@@ -21,22 +21,12 @@
 	</footer>
 </template>
 
-<script>
+<script setup>
 import footerBg from '@/assets/img/footer-bg.png'
 import FnlIcon from "@/components/icons/FnlIcon.vue";
 import TelegramIcon from "@/components/icons/TelegramIcon.vue";
 import VkIcon from "@/components/icons/VkIcon.vue";
 import YoutubeIcon from "@/components/icons/YoutubeIcon.vue";
-
-export default {
-	name: "FooterPage",
-	components: {YoutubeIcon, VkIcon, TelegramIcon, FnlIcon},
-	data() {
-		return {
-			footerBg: footerBg,
-		}
-	}
-}
 </script>
 
 <style scoped lang="scss">

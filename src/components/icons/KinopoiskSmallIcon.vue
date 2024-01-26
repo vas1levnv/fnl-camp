@@ -33,10 +33,3 @@
 		<path d="M51.4903 15.9448L53.6515 18.4939V15.9448H56.2767V20.9013H54.4138L52.2527 18.359V20.9013H49.6274V15.9448H51.4903Z" fill="#010202"/>
 	</svg>
 </template>
-
-<script>
-export default {
-	name: "KinopoiskSmallIcon"
-}
-</script>
-

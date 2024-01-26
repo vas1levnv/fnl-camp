@@ -1,19 +1,14 @@
 <template>
 	<div class="teams-detail">
-		<teams-item title="Первая группа" :teams="teamsFirst"/>
-		<teams-item title="Вторая группа" :teams="teamsSecond"/>
+		<teams-item title="Первая группа" :teams="props.teamsFirst"/>
+		<teams-item title="Вторая группа" :teams="props.teamsSecond"/>
 	</div>
 </template>
 
-<script>
+<script setup>
 import TeamsItem from "@/components/TeamsInfo/TeamsDetail/TeamsItem.vue";
+const props = defineProps(['teamsFirst', 'teamsSecond'])
 
-export default {
-	name: "TeamsDetail",
-	components: {TeamsItem},
-	props: ['teamsFirst', 'teamsSecond']
-	
-}
 </script>
 
 <style scoped lang="scss">

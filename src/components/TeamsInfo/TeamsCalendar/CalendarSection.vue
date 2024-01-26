@@ -12,24 +12,12 @@
 	</div>
 </template>
 
-<script>
-export default {
-	name: "CalendarSection",
-	data() {
-		return {
-			games: [
-				{id: 1, teamHome: 'Енисей', time: '01.02.2024', teamGuest: 'Спартак-2'},
-				{id: 1, teamHome: 'Родина', time: '01.02.2024', teamGuest: 'Амкал'},
-				{id: 1, teamHome: 'Енисей', time: '01.02.2024', teamGuest: 'Broke Boys'},
-				{id: 1, teamHome: 'Родина', time: '01.02.2024', teamGuest: 'Амкал'},
-				{id: 1, teamHome: 'Родина', time: '01.02.2024', teamGuest: 'Broke Boys'},
-				{id: 1, teamHome: 'Родина', time: '01.02.2024', teamGuest: 'Амкал'},
-				{id: 1, teamHome: '1 место, 1 группа', time: '01.02.2024', teamGuest: '1 место, 2 группа'},
-				{id: 1, teamHome: '2 место, 1 группа', time: '01.02.2024', teamGuest: '2 место, 2 группа'},
-			]
-		}
-	}
-}
+<script setup>
+import {useStore} from "vuex";
+
+const store = useStore()
+const games = store.state.games
+
 </script>
 
 <style scoped lang="scss">
@@ -42,7 +30,7 @@ export default {
 		margin-bottom: 1.25rem;
 	}
 	
-	&__data{
+	&__data {
 		margin-bottom: 0.5rem;
 		font-size: 2.25rem;
 		font-weight: 500;
@@ -88,8 +76,8 @@ export default {
 
 @media (max-width: 1024px) {
 	.calendar-section {
-		table{
-			td{
+		table {
+			td {
 				font-size: 1.25rem;
 			}
 		}
@@ -103,13 +91,14 @@ export default {
 			margin-bottom: 1rem;
 		}
 		
-		&__data{
+		&__data {
 			font-size: 1.5rem;
 		}
 		
-		table{
-			td{
+		table {
+			td {
 				font-size: 1rem;
+				
 				&:first-child {
 					padding-left: .5rem;
 				}

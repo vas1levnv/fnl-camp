@@ -4,17 +4,15 @@
 			<div class="container">
 				<div class="teams-list">
 					<div class="teams-list__left">
-						<div class="teams-img"><img :src="enisei" alt="enisei"></div>
-						<div class="teams-img"><img :src="spartak" alt="spartak"></div>
-						<div class="teams-img"><img :src="bbTeam" alt="bbTeam"></div>
+						<div class="teams-img" v-for="item in teamFirst" :key="item.id">
+							<img :src="item.src" :alt="item.name"></div>
 					</div>
 					<div class="teams-icon">
 						<kinopoisk-icon/>
 					</div>
 					<div class="teams-list__right">
-						<div class="teams-img"><img :src="rodina" alt="rodina"></div>
-						<div class="teams-img"><img :src="amkal" alt="amkal"></div>
-						<div class="teams-img"><img :src="petropavl" alt="petropavl"></div>
+						<div class="teams-img" v-for="item in teamsSecond" :key="item.id">
+							<img :src="item.src" :alt="item.name"></div>
 					</div>
 				</div>
 			</div>
@@ -23,32 +21,15 @@
 
 </template>
 
-<script>
-import bannerImg from '@/assets/img/main-stadium.png'
-import enisei from '@/assets/img/Enisei.png'
-import amkal from '@/assets/img/Amkal.png'
-import bbTeam from '@/assets/img/bb.png'
-import rodina from '@/assets/img/rodina.png'
-import petropavl from '@/assets/img/petropavl.png'
-import spartak from '@/assets/img/spartak.png'
+<script setup>
+import {useStore} from "vuex";
+import banner from '@/assets/img/main-stadium.png'
 import KinopoiskIcon from "@/components/icons/KinopoiskIcon.vue";
 
-export default {
-	name: "main-teams",
-	components: {KinopoiskIcon},
-	
-	data() {
-		return {
-			banner: bannerImg,
-			enisei: enisei,
-			amkal: amkal,
-			bbTeam: bbTeam,
-			rodina: rodina,
-			petropavl: petropavl,
-			spartak: spartak,
-		}
-	}
-}
+const store = useStore()
+const teamFirst = store.state.teamsFirst
+const teamsSecond = store.state.teamsSecond
+
 </script>
 
 <style scoped lang="scss">

@@ -2,7 +2,7 @@
 	<table>
 		<tr>
 			<th>
-				{{ title }}
+				{{ props.title }}
 			</th>
 			<th>И</th>
 			<th>В</th>
@@ -11,7 +11,7 @@
 			<th>Г</th>
 			<th>О</th>
 		</tr>
-		<tr v-for="item in teams" :key="item.id">
+		<tr v-for="item in props.teams" :key="item.id">
 			<td>
 				<div class="team-name">
 					<img :class="{white: item.isWhite}" :src="item.src" :alt="item.name">
@@ -28,11 +28,10 @@
 	</table>
 </template>
 
-<script>
-export default {
-	name: "TeamsTableItem",
-	props: ['title', 'teams']
-}
+<script setup>
+
+const props = defineProps(['title', 'teams'])
+
 </script>
 
 <style scoped lang="scss">

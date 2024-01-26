@@ -8,13 +8,8 @@
 	</header>
 </template>
 
-<script>
+<script setup>
 import KinopoiskSmallIcon from "@/components/icons/KinopoiskSmallIcon.vue";
-
-export default {
-	name: "HeaderPage",
-	components: {KinopoiskSmallIcon}
-}
 </script>
 
 <style scoped lang="scss">

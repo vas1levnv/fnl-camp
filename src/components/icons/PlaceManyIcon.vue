@@ -59,10 +59,3 @@
 	</svg>
 
 </template>
-
-<script>
-export default {
-	name: "PlaceManyIcon"
-}
-</script>
-

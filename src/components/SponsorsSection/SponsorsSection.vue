@@ -14,13 +14,8 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import FnlIcon from "@/components/icons/FnlIcon.vue";
-
-export default {
-	name: "SponsorsSection",
-	components: {FnlIcon}
-}
 </script>
 
 <style scoped lang="scss">

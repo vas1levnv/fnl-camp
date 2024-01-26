@@ -7,21 +7,10 @@
 	</a>
 </template>
 
-<script>
+<script setup>
 import bg from '@/assets/img/kinopoisk-bg.png'
 import icon from '@/assets/img/kinopoisk-color.png'
 import PlayBtnIcon from "@/components/icons/PlayBtnIcon.vue";
-
-export default {
-	name: "VideoRedirect",
-	components: {PlayBtnIcon},
-	data() {
-		return {
-			bg: bg,
-			icon: icon
-		}
-	}
-}
 </script>
 
 <style scoped lang="scss">

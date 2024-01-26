@@ -1,7 +1,7 @@
 <template>
 	<div class="teams-detail-list">
-		<h2 class="teams-detail__title">{{ title }}</h2>
-		<div class="teams-detail-item" v-for="item in teams" :key="item.id">
+		<h2 class="teams-detail__title">{{ props.title }}</h2>
+		<div class="teams-detail-item" v-for="item in props.teams" :key="item.id">
 			<div class="teams-detail-item__img" :class="{white: item.isWhite}">
 				<img :src="item.src" :alt="item.name">
 			</div>
@@ -11,14 +11,16 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import CustomButton from "@/components/UI/CustomButton.vue";
 
-export default {
-	name: "TeamsItem",
-	components: {CustomButton},
-	props: ['title', 'teams']
-}
+const props = defineProps(['title', 'teams'])
+
+// export default {
+// 	name: "TeamsItem",
+// 	components: {CustomButton},
+// 	props: ['title', 'teams']
+// }
 </script>
 
 <style scoped lang="scss">

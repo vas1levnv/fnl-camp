@@ -15,10 +15,8 @@
 	</div>
 </template>
 
-<script>
-export default {
-	name: "AboutStadium"
-}
+<script setup>
+
 </script>
 
 <style scoped lang="scss">

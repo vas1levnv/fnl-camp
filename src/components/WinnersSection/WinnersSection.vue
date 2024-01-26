@@ -10,7 +10,7 @@
 					“Урал”. Кстати, команда из Екатеринбурга чаще всех становилась чемпионом турнира: в 2012, 2013 и
 					2018 годах.
 				</div>
-
+				
 				<h2>Победители прошлых лет</h2>
 				<div class="winners-teams">
 					<div class="winners-item" :key="item.id" v-for="item in teams">
@@ -26,34 +26,14 @@
 	</div>
 </template>
 
-<script>
-import ural from '@/assets/img/ural.png'
-import luch from '@/assets/img/luch.png'
-import volgar from '@/assets/img/volgar.png'
-import orenburg from '@/assets/img/orenburg.png'
-import fakel from '@/assets/img/fakel.png'
-import avangard from '@/assets/img/avangard.png'
-import khimki from '@/assets/img/khimki.png'
+<script setup>
 import PlaceManyIcon from "@/components/icons/PlaceManyIcon.vue";
 import PlaceIcon from "@/components/icons/PlaceIcon.vue";
+import {useStore} from "vuex";
 
-export default {
-	name: "WinnersSection",
-	components: {PlaceIcon, PlaceManyIcon},
-	data() {
-		return {
-			teams: [
-				{id: 1, years: '2012, 2013, 2018', name: 'Урал', src: ural},
-				{id: 2, years: '2014', name: 'Луч-Энергия', src: luch},
-				{id: 3, years: '2015', name: 'Волгарь', src: volgar},
-				{id: 4, years: '2016', name: 'Оренбург', src: orenburg},
-				{id: 5, years: '2017', name: 'Факел', src: fakel},
-				{id: 6, years: '2019', name: 'Авангард', src: avangard},
-				{id: 7, years: '2020', name: 'Химки', src: khimki},
-			]
-		}
-	},
-}
+const store = useStore()
+const teams = store.state.winnersTeam
+
 </script>
 
 <style scoped lang="scss">
@@ -143,7 +123,7 @@ export default {
 			row-gap: 2rem;
 		}
 		
-		h2{
+		h2 {
 			font-size: 2rem;
 		}
 		

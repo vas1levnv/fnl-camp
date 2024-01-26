@@ -7,10 +7,7 @@
 	</router-link>
 </template>
 
-<script>
-export default {
-	name: "MoveToTop",
-}
+<script setup>
 </script>
 
 <style scoped>

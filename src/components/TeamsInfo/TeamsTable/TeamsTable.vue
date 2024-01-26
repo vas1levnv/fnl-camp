@@ -1,22 +1,14 @@
 <template>
 	<div class="teams-table">
 		<h2>Турнирная таблица</h2>
-		<teams-table-item title="Первая группа" :teams="teamsFirst"/>
-		<teams-table-item title="Вторая группа" :teams="teamsSecond"/>
+		<teams-table-item title="Первая группа" :teams="props.teamsFirst"/>
+		<teams-table-item title="Вторая группа" :teams="props.teamsSecond"/>
 	</div>
 </template>
 
-<script>
+<script setup>
 import TeamsTableItem from "@/components/TeamsInfo/TeamsTable/TeamsTableItem.vue";
-
-export default {
-	name: "TeamsTable",
-	components: {TeamsTableItem},
-	props: {
-		teamsFirst: Array,
-		teamsSecond: Array,
-	},
-}
+const props = defineProps(['teamsFirst', 'teamsSecond'])
 </script>
 
 <style scoped lang="scss">

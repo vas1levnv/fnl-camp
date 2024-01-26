@@ -4,10 +4,7 @@
 	</button>
 </template>
 
-<script>
-export default {
-	name: "CustomButton"
-}
+<script setup>
 </script>
 
 <style scoped lang="scss">
@@ -25,7 +22,7 @@ button {
 }
 
 @media (max-width: 768px) {
-	button{
+	button {
 		padding: 0.5rem 1rem;
 	}
 }

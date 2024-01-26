@@ -57,10 +57,3 @@
 		</defs>
 	</svg>
 </template>
-
-<script>
-export default {
-	name: "KinopoiskIcon"
-}
-</script>
-
