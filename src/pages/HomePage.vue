@@ -1,7 +1,7 @@
 <template>
 	<main-teams/>
-	<teams-info/>
 	<video-redirect/>
+	<teams-info/>
 	<teams-description/>
 	<map-section/>
 	<about-stadium/>

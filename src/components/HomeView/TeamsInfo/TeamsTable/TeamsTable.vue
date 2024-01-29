@@ -3,6 +3,7 @@
 		<h2>Турнирная таблица</h2>
 		<teams-table-item title="Первая группа" :teams="props.teamsFirst"/>
 		<teams-table-item title="Вторая группа" :teams="props.teamsSecond"/>
+		<div class="teams-table__text">*<span>И</span>-Игры, <span>В</span>‑Выигрыши, <span>Н</span>-Ничья, <span>П</span>-Поражения, <span>Г</span>-Голы, <span>О</span>-Очки</div>
 	</div>
 </template>
 
@@ -21,6 +22,14 @@ const props = defineProps(['teamsFirst', 'teamsSecond'])
 	
 	h2 {
 		text-align: center;
+	}
+	
+	&__text{
+		text-align: center;
+		font-size: 2rem;
+		span{
+			font-weight: 700;
+		}
 	}
 }
 

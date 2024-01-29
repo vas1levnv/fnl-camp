@@ -1,12 +1,28 @@
 <template>
 	<div class="calendar-section">
 		<h2>Расписание игр</h2>
-		<div class="calendar-section__data">Дата</div>
 		<table>
+			<tr>
+				<th></th>
+				<th>Дата</th>
+				<th>Время</th>
+				<th></th>
+			</tr>
 			<tr v-for="item in games" :key="item.id">
-				<td>{{ item.teamHome }}</td>
+				<td>
+					<div>
+						<div><img :src="item.teamHome.src" :alt="item.teamHome.name"></div>
+						<div>{{ item.teamHome.name }}</div>
+					</div>
+				</td>
+				<td>{{ item.date }}</td>
 				<td>{{ item.time }}</td>
-				<td>{{ item.teamGuest }}</td>
+				<td>
+					<div>
+						<div>{{ item.teamGuest.name }}</div>
+						<div><img :src="item.teamGuest.src" :alt="item.teamGuest.name"></div>
+					</div>
+				</td>
 			</tr>
 		</table>
 	</div>
@@ -30,12 +46,6 @@ const games = store.state.games
 		margin-bottom: 1.25rem;
 	}
 	
-	&__data {
-		margin-bottom: 0.5rem;
-		font-size: 2.25rem;
-		font-weight: 500;
-	}
-	
 	table {
 		width: 100%;
 		max-width: 1400px;
@@ -45,13 +55,19 @@ const games = store.state.games
 		
 		tr {
 			&:nth-child(odd) {
-				background: var(--linear-gradient);
-				color: white;
+				
 			}
 			
 			&:nth-child(even) {
-				
+				background: var(--linear-gradient);
+				color: white;
 			}
+		}
+		
+		th {
+			font-size: 2.25rem;
+			font-weight: 500;
+			padding-bottom: 0.5rem;
 		}
 		
 		td {

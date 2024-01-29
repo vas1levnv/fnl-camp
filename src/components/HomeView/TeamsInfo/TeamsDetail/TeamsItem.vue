@@ -48,7 +48,7 @@ const props = defineProps(['title', 'teams'])
 		&__name {
 			flex: 1 1 0;
 			font-size: 2.25rem;
-			font-weight: 500;
+			font-weight: 700;
 		}
 	}
 }

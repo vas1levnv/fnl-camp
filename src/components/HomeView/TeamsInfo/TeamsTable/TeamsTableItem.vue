@@ -42,6 +42,7 @@ table {
 	border-collapse: collapse;
 	max-width: 1200px;
 	margin: 0 auto;
+	color: white;
 	
 	img {
 		width: 25px;
@@ -92,7 +93,8 @@ table {
 		}
 		
 		&:nth-child(odd) {
-			background: #FFCEBA;
+			background: none;
+			color: black;
 		}
 		
 		&:first-child {

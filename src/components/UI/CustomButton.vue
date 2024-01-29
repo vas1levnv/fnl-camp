@@ -12,8 +12,8 @@ button {
 	border: none;
 	outline: none;
 	background: var(--orange);
-	color: black;
-	padding: 0.75rem 1.5rem;
+	color: white;
+	padding: 1rem 2.5rem;
 	border-radius: 1rem;
 	font-size: 1.25rem;
 	font-weight: 500;

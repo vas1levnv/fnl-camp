@@ -93,14 +93,69 @@ export const store = createStore({
 				}
 			],
 			games: [
-				{id: 1, teamHome: 'Енисей', time: '01.02.2024', teamGuest: 'Спартак-2'},
-				{id: 1, teamHome: 'Родина', time: '01.02.2024', teamGuest: 'Амкал'},
-				{id: 1, teamHome: 'Енисей', time: '01.02.2024', teamGuest: 'Broke Boys'},
-				{id: 1, teamHome: 'Родина', time: '01.02.2024', teamGuest: 'Амкал'},
-				{id: 1, teamHome: 'Родина', time: '01.02.2024', teamGuest: 'Broke Boys'},
-				{id: 1, teamHome: 'Родина', time: '01.02.2024', teamGuest: 'Амкал'},
-				{id: 1, teamHome: '1 место, 1 группа', time: '01.02.2024', teamGuest: '1 место, 2 группа'},
-				{id: 1, teamHome: '2 место, 1 группа', time: '01.02.2024', teamGuest: '2 место, 2 группа'},
+				{
+					id: 1,
+					teamHome: {name: 'Енисей', src: enisei},
+					date: '10.02.2024',
+					time: '-',
+					teamGuest: {name: 'Спартак-2', src: spartak}
+				},
+				{
+					id: 2,
+					teamHome: {name: 'Родина', src: rodina},
+					date: '12.02.2024',
+					time: '-',
+					teamGuest: {name: 'Кызыл-Жар', src: petropavl}
+				},
+				{
+					id: 3,
+					teamHome: {name: 'Broke Boys', src: bb},
+					date: '14.02.2024',
+					time: '-',
+					teamGuest: {name: 'Енисей', src: enisei}
+				},
+				{
+					id: 4,
+					teamHome: {name: 'Кызыл-Жар', src: petropavl},
+					date: '15.02.2024',
+					time: '-',
+					teamGuest: {name: 'Амкал', src: amkal}
+				},
+				{
+					id: 5,
+					teamHome: {name: 'Спартак-2', src: spartak},
+					date: '17.02.2024',
+					time: '-',
+					teamGuest: {name: 'Broke Boys', src: bb}
+				},
+				{
+					id: 6,
+					teamHome: {name: 'Амкал', src: amkal},
+					date: '17.02.2024',
+					time: '-',
+					teamGuest: {name: 'Родина', src: rodina}
+				},
+				{
+					id: 7,
+					teamHome: {name: '3 место, 1 группа'},
+					date: '21.02.2024',
+					time: '-',
+					teamGuest: {name: '3 место, 2 группа'}
+				},
+				{
+					id: 8,
+					teamHome: {name: '2 место, 1 группа'},
+					date: '22.02.2024',
+					time: '-',
+					teamGuest: {name: '2 место, 2 группа'}
+				},
+				{
+					id: 9,
+					teamHome: {name: '1 место, 1 группа'},
+					date: '02.2024',
+					time: '-',
+					teamGuest: {name: '1 место, 2 группа'}
+				},
 			],
 			teams: [
 				{
