@@ -1,15 +1,6 @@
 <template>
 	<div class="winners">
 		<div class="winners-wrapper">
-			<div class="winners-text">
-				Спустя 4 года Футбольная Национальная Лига возобновляет проведение зимнего Кубка ФНЛ.
-				<br>
-				<br>
-				Зимний Кубок ФНЛ проводился на протяжении 9 лет, начиная с 2012 года, где победителем стал ФК
-				“Урал”. Кстати, команда из Екатеринбурга чаще всех становилась чемпионом турнира: в 2012, 2013 и
-				2018 годах.
-			</div>
-
 			<h2>Победители прошлых лет</h2>
 			<div class="winners-teams">
 				<div class="winners-item" :key="item.id" v-for="item in teams">
@@ -39,16 +30,7 @@ const teams = store.state.winnersTeam
 .winners {
 	&-wrapper {
 		padding: 5rem 0 10rem;
-	}
-	
-	&-text {
-		text-align: center;
-		font-size: 1.5rem;
-		font-weight: 500;
-		max-width: 850px;
-		margin: 0 auto 5rem;
-	}
-	
+	}	
 	h2 {
 		text-align: center;
 		color: white;
@@ -119,10 +101,6 @@ const teams = store.state.winnersTeam
 			padding: 3rem 0 5rem;
 		}
 		
-		&-text {
-			font-size: 1.5rem;
-		}
-		
 		&-teams {
 			grid-template-columns: repeat(4, 1fr);
 			row-gap: 4rem;
@@ -151,10 +129,6 @@ const teams = store.state.winnersTeam
 			}
 		}
 		
-		&-text{
-			font-size: 1rem;
-			margin-bottom: 2rem;
-		}
 	}
 }
 

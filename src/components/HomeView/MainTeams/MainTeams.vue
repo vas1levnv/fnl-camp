@@ -16,7 +16,14 @@
 							<img :src="item.src" :alt="item.name"></div>
 					</div>
 				</div>
-				<winners-section/>
+				<div class="teams-text">
+					Спустя 4 года Футбольная Национальная Лига возобновляет проведение зимнего Кубка ФНЛ.
+					<br>
+					<br>
+					Зимний Кубок ФНЛ проводился на протяжении 9 лет, начиная с 2012 года, где победителем стал ФК
+					“Урал”. Кстати, команда из Екатеринбурга чаще всех становилась чемпионом турнира: в 2012, 2013 и
+					2018 годах.
+				</div>
 			</div>
 		</div>
 	</div>
@@ -27,7 +34,6 @@
 import {useStore} from "vuex";
 import banner from '@/assets/img/main-stadium.png'
 import KinopoiskIcon from "@/components/icons/KinopoiskIcon.vue";
-import WinnersSection from "@/components/HomeView/WinnersSection/WinnersSection.vue";
 
 const store = useStore()
 const teamFirst = store.state.teamsFirst
@@ -39,7 +45,6 @@ const teamsSecond = store.state.teamsSecond
 .teams {
 	display: flex;
 	flex-direction: column;
-	
 	position: relative;
 	color: white;
 	
@@ -48,6 +53,14 @@ const teamsSecond = store.state.teamsSecond
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+	}
+	
+	&-text {
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 500;
+		max-width: 850px;
+		margin: 0 auto 5rem;
 	}
 	
 	&:before {
@@ -87,7 +100,7 @@ const teamsSecond = store.state.teamsSecond
 	
 	&-icon {
 		position: absolute;
-		top: -20%;
+		top: -50%;
 		left: 50%;
 		transform: translateX(-50%);
 		width: 20vw;
@@ -98,7 +111,6 @@ const teamsSecond = store.state.teamsSecond
 	}
 	
 	&-text {
-		
 		text-align: center;
 		max-width: 850px;
 		margin: 5rem auto 5rem;
@@ -109,9 +121,8 @@ const teamsSecond = store.state.teamsSecond
 @media (max-width: 1440px) {
 	.teams {
 		background-position: top;
-		
 		&-icon {
-			top: -12%;
+			top: -40%;
 			width: 200px;
 		}
 	}
@@ -143,6 +154,10 @@ const teamsSecond = store.state.teamsSecond
 			}
 		}
 		
+		&-text {
+			font-size: 1.5rem;
+		}
+		
 		&-img {
 			display: flex;
 			justify-content: center;
@@ -150,7 +165,7 @@ const teamsSecond = store.state.teamsSecond
 		}
 		
 		&-icon {
-			top: -18%;
+			top: -40%;
 			width: 200px;
 		}
 		
@@ -164,9 +179,13 @@ const teamsSecond = store.state.teamsSecond
 @media (max-width: 768px) {
 	.teams {
 		&-icon {
-			top: -12%;
+			top: -50%;
 		}
 		
+		&-text {
+			font-size: 1rem;
+			margin: 2rem 0;
+		}
 	}
 }
 
