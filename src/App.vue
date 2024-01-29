@@ -1,12 +1,11 @@
 <template>
-	<header-page/>
+<!--	<header-page/>-->
 	<router-view/>
 	<footer-page/>
 	<move-to-top/>
 </template>
 
 <script setup>
-import HeaderPage from "@/components/Header/HeaderPage.vue";
 import FooterPage from "@/components/Footer/FooterPage.vue";
 import MoveToTop from "@/components/UI/MoveToTop/MoveToTop.vue";
 </script>
@@ -27,8 +26,8 @@ body {
 	width: 100vw;
 	font-family: "TT Runs", sans-serif;
 	overflow-x: hidden;
-	background: black;
-	color: white;
+	background: white;
+	color: black;
 }
 
 #app {

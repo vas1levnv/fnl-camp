@@ -1,5 +1,6 @@
 <template>
-	<div class="teams" :style="{ 'background-image': 'url(' + banner + ')' }">
+	<div class="teams">
+		<div class="teams-bg" :style="{ 'background-image': 'url(' + banner + ')' }"></div>
 		<div class="teams-wrapper">
 			<div class="container">
 				<div class="teams-list">
@@ -15,6 +16,7 @@
 							<img :src="item.src" :alt="item.name"></div>
 					</div>
 				</div>
+				<winners-section/>
 			</div>
 		</div>
 	</div>
@@ -25,6 +27,7 @@
 import {useStore} from "vuex";
 import banner from '@/assets/img/main-stadium.png'
 import KinopoiskIcon from "@/components/icons/KinopoiskIcon.vue";
+import WinnersSection from "@/components/HomeView/WinnersSection/WinnersSection.vue";
 
 const store = useStore()
 const teamFirst = store.state.teamsFirst
@@ -34,13 +37,18 @@ const teamsSecond = store.state.teamsSecond
 
 <style scoped lang="scss">
 .teams {
-	height: 100vh;
-	min-height: 800px;
 	display: flex;
-	align-items: flex-end;
-	background-repeat: no-repeat;
-	background-position: bottom;
-	background-size: cover;
+	flex-direction: column;
+	
+	position: relative;
+	color: white;
+	
+	&-bg {
+		height: 560px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
 	
 	&:before {
 		content: '';
@@ -63,7 +71,7 @@ const teamsSecond = store.state.teamsSecond
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
-		padding: 7.5rem 0;
+		padding: 7.5rem 0 2rem;
 		
 		&__left, &__right {
 			display: flex;
@@ -79,7 +87,7 @@ const teamsSecond = store.state.teamsSecond
 	
 	&-icon {
 		position: absolute;
-		top: -80%;
+		top: -20%;
 		left: 50%;
 		transform: translateX(-50%);
 		width: 20vw;
@@ -88,14 +96,33 @@ const teamsSecond = store.state.teamsSecond
 			width: 100%;
 		}
 	}
+	
+	&-text {
+		
+		text-align: center;
+		max-width: 850px;
+		margin: 5rem auto 5rem;
+	}
 }
 
+
+@media (max-width: 1440px) {
+	.teams {
+		background-position: top;
+		
+		&-icon {
+			top: -12%;
+			width: 200px;
+		}
+	}
+	
+}
 
 @media (max-width: 1024px) {
 	.teams {
 		&-list {
 			flex-direction: column;
-			padding: 7.5rem 0 5rem;
+			padding: 7.5rem 0 2rem;
 			
 			&__left, &__right {
 				width: 100%;
@@ -123,11 +150,24 @@ const teamsSecond = store.state.teamsSecond
 		}
 		
 		&-icon {
-			top: -70%;
+			top: -18%;
 			width: 200px;
 		}
+		
+		&-bg {
+			max-height: 60vh;
+			min-height: 300px;
+		}
 	}
-	
+}
+
+@media (max-width: 768px) {
+	.teams {
+		&-icon {
+			top: -12%;
+		}
+		
+	}
 }
 
 @media (max-width: 576px) {
@@ -145,7 +185,7 @@ const teamsSecond = store.state.teamsSecond
 		}
 		
 		&-icon {
-			top: -105%;
+			top: -300px;
 			width: 150px;
 		}
 	}

@@ -1,25 +1,25 @@
 <template>
 	<div class="winners">
-		<div class="container">
-			<div class="winners-wrapper">
-				<div class="winners-text">
-					Спустя 4 года Футбольная Национальная Лига возобновляет проведение зимнего Кубка ФНЛ.
-					<br>
-					<br>
-					Зимний Кубок ФНЛ проводился на протяжении 9 лет, начиная с 2012 года, где победителем стал ФК
-					“Урал”. Кстати, команда из Екатеринбурга чаще всех становилась чемпионом турнира: в 2012, 2013 и
-					2018 годах.
-				</div>
-				
-				<h2>Победители прошлых лет</h2>
-				<div class="winners-teams">
-					<div class="winners-item" :key="item.id" v-for="item in teams">
-						<place-many-icon v-if="item.name === 'Урал'"></place-many-icon>
-						<place-icon v-else></place-icon>
-						<div class="winners-item__years">{{ item.years }}</div>
-						<div class="winners-item__name">{{ item.name }}</div>
-						<div class="winners-item__img"><img :src="item.src" alt="item.name"></div>
+		<div class="winners-wrapper">
+			<div class="winners-text">
+				Спустя 4 года Футбольная Национальная Лига возобновляет проведение зимнего Кубка ФНЛ.
+				<br>
+				<br>
+				Зимний Кубок ФНЛ проводился на протяжении 9 лет, начиная с 2012 года, где победителем стал ФК
+				“Урал”. Кстати, команда из Екатеринбурга чаще всех становилась чемпионом турнира: в 2012, 2013 и
+				2018 годах.
+			</div>
+
+			<h2>Победители прошлых лет</h2>
+			<div class="winners-teams">
+				<div class="winners-item" :key="item.id" v-for="item in teams">
+					<div class="winners-item__icon">
+						<place-icon></place-icon>
+						<div class="winners-item__icon-place">{{ item.id }}</div>
 					</div>
+					<div class="winners-item__years">{{ item.years }}</div>
+					<div class="winners-item__name">{{ item.name }}</div>
+					<div class="winners-item__img"><img :src="item.src" alt="item.name"></div>
 				</div>
 			</div>
 		</div>
@@ -27,7 +27,6 @@
 </template>
 
 <script setup>
-import PlaceManyIcon from "@/components/icons/PlaceManyIcon.vue";
 import PlaceIcon from "@/components/icons/PlaceIcon.vue";
 import {useStore} from "vuex";
 
@@ -43,13 +42,16 @@ const teams = store.state.winnersTeam
 	}
 	
 	&-text {
-		font-size: 2.25rem;
+		text-align: center;
+		font-size: 1.5rem;
 		font-weight: 500;
-		margin-bottom: 5rem;
+		max-width: 850px;
+		margin: 0 auto 5rem;
 	}
 	
 	h2 {
 		text-align: center;
+		color: white;
 	}
 	
 	&-teams {
@@ -64,8 +66,21 @@ const teams = store.state.winnersTeam
 		flex-direction: column;
 		align-items: center;
 		
-		svg {
-			height: 85px;
+		&__icon {
+			position: relative;
+			
+			&-place {
+				position: absolute;
+				bottom: 5%;
+				left: -15%;
+				font-size: 4.5rem;
+				font-weight: 700;
+				line-height: 100%;
+			}
+			
+			svg {
+				height: 120px;
+			}
 		}
 		
 		&__years {
@@ -77,7 +92,6 @@ const teams = store.state.winnersTeam
 		
 		&__name {
 			font-size: 1.25rem;
-			color: var(--orange);
 			font-weight: 700;
 			margin-bottom: 2.75rem;
 			white-space: nowrap;
@@ -128,9 +142,18 @@ const teams = store.state.winnersTeam
 		}
 		
 		&-item {
+			
+			&__name{
+				margin-bottom: 1.5rem;
+			}
 			&:last-child {
 				grid-column: 1/3;
 			}
+		}
+		
+		&-text{
+			font-size: 1rem;
+			margin-bottom: 2rem;
 		}
 	}
 }

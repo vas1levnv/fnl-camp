@@ -35,6 +35,7 @@ import PlayBtnIcon from "@/components/icons/PlayBtnIcon.vue";
 	
 	&-text {
 		margin-bottom: 0.75rem;
+		color: white;
 	}
 }
 
