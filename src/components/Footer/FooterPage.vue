@@ -40,7 +40,7 @@ import YoutubeIcon from "@/components/icons/YoutubeIcon.vue";
 		justify-content: space-between;
 		align-items: flex-end;
 		height: 40vh;
-		min-height: 380px;
+		min-height: 450px;
 		padding: 5rem 0;
 	}
 	
@@ -59,6 +59,13 @@ import YoutubeIcon from "@/components/icons/YoutubeIcon.vue";
 	}
 }
 
+@media (max-width: 1024px) {
+	.footer{
+		&-wrapper {
+			min-height: 300px;
+		}
+	}
+}
 
 @media (max-width: 768px) {
 	.footer{

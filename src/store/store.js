@@ -15,6 +15,9 @@ import petropavl from "@/assets/img/petropavl.png";
 import teamDesc1 from "@/assets/img/teamDesc1.png";
 import personTeam from "@/assets/img/personTeam.png";
 import teamDesc2 from "@/assets/img/teamDesc2.png";
+import sponsorKinopoisk from  "@/assets/img/sponsor-kinopoisk.png"
+import sponsorBetboom from  "@/assets/img/sponsor-betboom.png"
+import sponsorSportmaster from  "@/assets/img/sponsor-sportmaster.png"
 
 export const store = createStore({
 	state() {
@@ -363,6 +366,11 @@ export const store = createStore({
 						},
 					],
 				}
+			],
+			sponsors: [
+				{id:1, text: 'Титульный партнер', src: sponsorKinopoisk},
+				{id:2, text: 'Генеральный партнер', src: sponsorBetboom},
+				{id:3, text: 'Технический партнер', src: sponsorSportmaster},
 			]
 		}
 	}

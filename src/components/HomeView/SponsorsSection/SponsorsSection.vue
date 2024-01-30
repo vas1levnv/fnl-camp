@@ -4,9 +4,9 @@
 			<div class="sponsors-section-wrapper">
 				<h2>Спонсоры турнира</h2>
 				<div class="sponsors-section-list">
-					<div class="sponsors-section-item" v-for="item in 5" :key="item">
-						<fnl-icon/>
-						<div>ФНЛ</div>
+					<div class="sponsors-section-item" v-for="item in store.state.sponsors" :key="item.id">
+						<div class="sponsors-section-item__img"><img :src="item.src" alt="item.text"></div>
+						<div>{{ item.text }}</div>
 					</div>
 				</div>
 			</div>
@@ -15,7 +15,10 @@
 </template>
 
 <script setup>
-import FnlIcon from "@/components/icons/FnlIcon.vue";
+import {useStore} from "vuex";
+
+const store = useStore()
+
 </script>
 
 <style scoped lang="scss">
@@ -29,7 +32,7 @@ import FnlIcon from "@/components/icons/FnlIcon.vue";
 	
 	&-list {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		padding: 5rem 0;
 		gap: 2rem;
 	}
@@ -39,24 +42,34 @@ import FnlIcon from "@/components/icons/FnlIcon.vue";
 		flex-direction: column;
 		align-items: center;
 		gap: 2.5rem;
+		text-align: center;
+		
+		&__img {
+			display: flex;
+			align-items: center;
+			height: 110px;
+			
+			img {
+				max-width: 100%;
+			}
+		}
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.sponsors-section {
-		h2{
+		font-size: 1.5rem;
+		h2 {
 			font-size: 2rem;
 		}
 		
 		&-list {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: 1fr;
 			padding: 2rem 0 3rem;
 		}
 		
-		&-item {
-			&:last-child {
-				grid-column: 1/3;
-			}
+		&-item{
+			gap: 1rem;
 		}
 	}
 }

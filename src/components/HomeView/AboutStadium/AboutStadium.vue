@@ -36,11 +36,11 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.about-stadium {
 		padding: 3.25rem 0;
 		font-weight: 500;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 }
 

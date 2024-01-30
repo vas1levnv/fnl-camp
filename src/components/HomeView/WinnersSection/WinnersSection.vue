@@ -1,16 +1,18 @@
 <template>
 	<div class="winners">
-		<div class="winners-wrapper">
-			<h2>Победители прошлых лет</h2>
-			<div class="winners-teams">
-				<div class="winners-item" :key="item.id" v-for="item in teams">
-					<div class="winners-item__icon">
-						<place-icon></place-icon>
-						<div class="winners-item__icon-place">{{ item.id }}</div>
+		<div class="container">
+			<div class="winners-wrapper">
+				<h2>Победители прошлых лет</h2>
+				<div class="winners-teams">
+					<div class="winners-item" :key="item.id" v-for="item in teams">
+						<div class="winners-item__icon">
+							<place-icon></place-icon>
+							<div class="winners-item__icon-place">{{ item.id }}</div>
+						</div>
+						<div class="winners-item__years">{{ item.years }}</div>
+						<div class="winners-item__name">{{ item.name }}</div>
+						<div class="winners-item__img"><img :src="item.src" alt="item.name"></div>
 					</div>
-					<div class="winners-item__years">{{ item.years }}</div>
-					<div class="winners-item__name">{{ item.name }}</div>
-					<div class="winners-item__img"><img :src="item.src" alt="item.name"></div>
 				</div>
 			</div>
 		</div>
@@ -28,9 +30,13 @@ const teams = store.state.winnersTeam
 
 <style scoped lang="scss">
 .winners {
+	background: var(--linear-gradient);
+	
 	&-wrapper {
 		padding: 5rem 0 10rem;
-	}	
+		color: white;
+	}
+	
 	h2 {
 		text-align: center;
 		color: white;
@@ -121,9 +127,10 @@ const teams = store.state.winnersTeam
 		
 		&-item {
 			
-			&__name{
+			&__name {
 				margin-bottom: 1.5rem;
 			}
+			
 			&:last-child {
 				grid-column: 1/3;
 			}

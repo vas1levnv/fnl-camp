@@ -76,7 +76,7 @@ const teamsSecond = store.state.teamsSecond
 	&-wrapper {
 		position: relative;
 		width: 100%;
-		background: var(--linear-gradient);
+		background: var(--orange);
 		
 	}
 	

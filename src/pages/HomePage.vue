@@ -3,6 +3,7 @@
 	<video-redirect/>
 	<teams-info/>
 	<teams-description/>
+	<winners-section/>
 	<map-section/>
 	<about-stadium/>
 	<sponsors-section/>
@@ -16,6 +17,7 @@ import TeamsDescription from "@/components/HomeView/TeamsDescription/TeamsDescri
 import MapSection from "@/components/HomeView/MapSection/MapSection.vue";
 import AboutStadium from "@/components/HomeView/AboutStadium/AboutStadium.vue";
 import SponsorsSection from "@/components/HomeView/SponsorsSection/SponsorsSection.vue";
+import WinnersSection from "@/components/HomeView/WinnersSection/WinnersSection.vue";
 </script>
 
 <style scoped>

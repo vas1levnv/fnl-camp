@@ -1,5 +1,8 @@
 <template>
 	<a href="#" class="video" :style="{ 'background-image': 'url(' + bg + ')' }">
+		<div class="video-circle">
+			<circle-bg/>
+		</div>
 		<play-btn-icon/>
 		<h3>Трансляция в прямом эфире</h3>
 		<div class="video-text">смотреть на</div>
@@ -11,6 +14,7 @@
 import bg from '@/assets/img/kinopoisk-bg.png'
 import icon from '@/assets/img/kinopoisk-color.png'
 import PlayBtnIcon from "@/components/icons/PlayBtnIcon.vue";
+import CircleBg from "@/components/icons/circle-bg.vue";
 </script>
 
 <style scoped lang="scss">
@@ -26,6 +30,8 @@ import PlayBtnIcon from "@/components/icons/PlayBtnIcon.vue";
 	text-align: center;
 	padding: 0 2rem;
 	background-position: center;
+	position: relative;
+	overflow: hidden;
 	
 	h3 {
 		margin-top: 7rem;
@@ -36,6 +42,26 @@ import PlayBtnIcon from "@/components/icons/PlayBtnIcon.vue";
 	&-text {
 		margin-bottom: 0.75rem;
 		color: white;
+	}
+	
+	&-circle {
+		position: absolute;
+		top: -1%;
+		left: 0;
+		width: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.video {
+		&-circle {
+			top: -0.5%;
+			height: 15%;
+			
+			svg {
+				height: 100%;
+			}
+		}
 	}
 }
 
