@@ -15,9 +15,9 @@ import petropavl from "@/assets/img/petropavl.png";
 import teamDesc1 from "@/assets/img/teamDesc1.png";
 import personTeam from "@/assets/img/personTeam.png";
 import teamDesc2 from "@/assets/img/teamDesc2.png";
-import sponsorKinopoisk from  "@/assets/img/sponsor-kinopoisk.png"
-import sponsorBetboom from  "@/assets/img/sponsor-betboom.png"
-import sponsorSportmaster from  "@/assets/img/sponsor-sportmaster.png"
+import sponsorKinopoisk from "@/assets/img/sponsor-kinopoisk.png"
+import sponsorBetboom from "@/assets/img/sponsor-betboom.png"
+import sponsorSportmaster from "@/assets/img/sponsor-sportmaster.png"
 
 export const store = createStore({
 	state() {
@@ -200,12 +200,12 @@ export const store = createStore({
 					name: 'Енисей',
 					src: teamDesc2,
 					year: '1937 год',
-					description: 'По итогам первой части сезона «Енисей» занимает 10 место в МЕЛБЕТ-Первой Лиге. В прошлом сезоне клуб принимал участие в стыковых матчах за выход в РПЛ против «Факела». ',
+					description: 'По итогам первой части сезона «Енисей» занимает 10 место в МЕЛБЕТ-Первой Лиге. В прошлом сезоне клуб принимал участие в стыковых матчах за выход в РПЛ против «Факела». ',
 					championship: 'МЕЛБЕТ-Первая Лига',
 					achievements: [
 						{
 							id: 1,
-							text: 'Выход в сезоне 2018/2019 в Российскую Премьер-Лигу'
+							text: 'Выход в сезоне 2018/2019 в Российскую Премьер-Лигу'
 						},
 						{
 							id: 2,
@@ -368,9 +368,41 @@ export const store = createStore({
 				}
 			],
 			sponsors: [
-				{id:1, text: 'Титульный партнер', src: sponsorKinopoisk},
-				{id:2, text: 'Генеральный партнер', src: sponsorBetboom},
-				{id:3, text: 'Технический партнер', src: sponsorSportmaster},
+				{id: 1, text: 'Титульный партнер', src: sponsorKinopoisk},
+				{id: 2, text: 'Генеральный партнер', src: sponsorBetboom},
+				{id: 3, text: 'Технический партнер', src: sponsorSportmaster},
+			],
+			rules: [
+				{
+					id: 1,
+					title: 'Чистое время игры 2 тайма по 25 минут)',
+					body: 'Считается только то время, когда мяч находится в игре. После любого свистка арбитра, выхода мяча за пределы поля счётчик времени останавливается'
+				},
+				{
+					id: 2,
+					title: 'Тренерский тайм-аут',
+					body: 'Один раз за тайм команда может взять тайм-аут продолжительностью в одну минуту'
+				},
+				{
+					id: 3,
+					title: 'Судейский challenge',
+					body: 'Команда вправе взять один раз за тайм-challenge на просмотр арбитром спорных игровых эпизодов (гол, пенальти, красная карточка)'
+				},
+				{
+					id: 4,
+					title: 'Красный (бонусный) мяч',
+					body: 'Команда вправе взять один раз за матч бонусный мяч. Гол забитый бонусным мячом приравнивается к двум'
+				},
+				{
+					id: 5,
+					title: 'Оранжевая судейская карточка',
+					body: 'Будет показана за фолы, оценивающиеся выше, чем жёлтая карточка, но недотягивающие на полноценную красную карточку. Если футболист получает оранжевую карточку, то он удаляется на 5 минут чистого времени'
+				},
+				{
+					id: 6,
+					title: 'Послематчевые буллитальти',
+					body: 'Перед каждой парой бьющих футболистов путём жребия определяется будут игроки бить пенальти или будет совершён выход один на один с вратарём'
+				},
 			]
 		}
 	}

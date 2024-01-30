@@ -1,6 +1,7 @@
 <template>
 	<main-teams/>
 	<video-redirect/>
+	<rules-section/>
 	<teams-info/>
 	<teams-description/>
 	<winners-section/>
@@ -18,6 +19,7 @@ import MapSection from "@/components/HomeView/MapSection/MapSection.vue";
 import AboutStadium from "@/components/HomeView/AboutStadium/AboutStadium.vue";
 import SponsorsSection from "@/components/HomeView/SponsorsSection/SponsorsSection.vue";
 import WinnersSection from "@/components/HomeView/WinnersSection/WinnersSection.vue";
+import RulesSection from "@/components/HomeView/RulesSection/RulesSection.vue";
 </script>
 
 <style scoped>
