@@ -1,30 +1,36 @@
 <template>
 	<div class="calendar-section">
 		<h2>Расписание игр</h2>
-		<table>
-			<tr>
-				<th></th>
-				<th>Дата</th>
-				<th>Время</th>
-				<th></th>
-			</tr>
-			<tr v-for="item in games" :key="item.id">
-				<td>
-					<div>
-						<div><img :src="item.teamHome.src" :alt="item.teamHome.name"></div>
-						<div>{{ item.teamHome.name }}</div>
-					</div>
-				</td>
-				<td>{{ item.date }}</td>
-				<td>{{ item.time }}</td>
-				<td>
-					<div>
-						<div>{{ item.teamGuest.name }}</div>
-						<div><img :src="item.teamGuest.src" :alt="item.teamGuest.name"></div>
-					</div>
-				</td>
-			</tr>
-		</table>
+		<div class="calendar-section-wrapper">
+			<table>
+				<tr>
+					<th></th>
+					<th>Дата</th>
+					<th>Время</th>
+					<th></th>
+				</tr>
+				<tr v-for="item in games" :key="item.id">
+					<td>
+						<div class="calendar-section__team">
+							<div class="calendar-section__team-img" v-if="item.teamHome.src" :class="{white: item.teamHome.isWhite}">
+								<img :src="item.teamHome.src" :alt="item.teamHome.name">
+							</div>
+							<div>{{ item.teamHome.name }}</div>
+						</div>
+					</td>
+					<td>{{ item.date }}</td>
+					<td>{{ item.time }}</td>
+					<td>
+						<div class="calendar-section__team">
+							<div>{{ item.teamGuest.name }}</div>
+							<div class="calendar-section__team-img" v-if="item.teamGuest.src" :class="{white: item.teamGuest.isWhite}">
+								<img :src="item.teamGuest.src" :alt="item.teamGuest.name">
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 </template>
 
@@ -40,6 +46,11 @@ const games = store.state.games
 .calendar-section {
 	margin-top: 5rem;
 	text-align: center;
+	
+	&-wrapper{
+		max-width: 100%;
+		overflow-x: auto;
+	}
 	
 	h2 {
 		
@@ -84,7 +95,33 @@ const games = store.state.games
 			&:last-child {
 				text-align: end;
 				padding-right: 1.5rem;
+				
+				.calendar-section__team {
+					justify-content: flex-end;
+				}
 			}
+		}
+	}
+	
+	&__team {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		
+		&-img {
+			display: flex;
+			align-items: center;
+			width: 40px;
+			height: 40px;
+			
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		
+		& .white {
+			filter: brightness(0) saturate(100%);
 		}
 	}
 }
@@ -93,8 +130,14 @@ const games = store.state.games
 @media (max-width: 1024px) {
 	.calendar-section {
 		table {
-			td {
+			
+			th {
 				font-size: 1.25rem;
+				padding-bottom: 0.25rem;
+			}
+			
+			td {
+				font-size: 1rem;
 			}
 		}
 	}
@@ -112,6 +155,8 @@ const games = store.state.games
 		}
 		
 		table {
+			
+			
 			td {
 				font-size: 1rem;
 				

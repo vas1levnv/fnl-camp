@@ -95,45 +95,45 @@ export const store = createStore({
 			games: [
 				{
 					id: 1,
-					teamHome: {name: 'Енисей', src: enisei},
+					teamHome: {name: 'Енисей', src: enisei, isWhite: false},
 					date: '10.02.2024',
 					time: '-',
-					teamGuest: {name: 'Спартак-2', src: spartak}
+					teamGuest: {name: 'Спартак-2', src: spartak, isWhite: false}
 				},
 				{
 					id: 2,
-					teamHome: {name: 'Родина', src: rodina},
+					teamHome: {name: 'Родина', src: rodina, isWhite: false},
 					date: '12.02.2024',
 					time: '-',
-					teamGuest: {name: 'Кызыл-Жар', src: petropavl}
+					teamGuest: {name: 'Кызыл-Жар', src: petropavl, isWhite: false}
 				},
 				{
 					id: 3,
-					teamHome: {name: 'Broke Boys', src: bb},
+					teamHome: {name: 'Broke Boys', src: bb, isWhite: true},
 					date: '14.02.2024',
 					time: '-',
-					teamGuest: {name: 'Енисей', src: enisei}
+					teamGuest: {name: 'Енисей', src: enisei, isWhite: false}
 				},
 				{
 					id: 4,
-					teamHome: {name: 'Кызыл-Жар', src: petropavl},
+					teamHome: {name: 'Кызыл-Жар', src: petropavl, isWhite: false},
 					date: '15.02.2024',
 					time: '-',
-					teamGuest: {name: 'Амкал', src: amkal}
+					teamGuest: {name: 'Амкал', src: amkal, isWhite: true}
 				},
 				{
 					id: 5,
-					teamHome: {name: 'Спартак-2', src: spartak},
+					teamHome: {name: 'Спартак-2', src: spartak, isWhite: false},
 					date: '17.02.2024',
 					time: '-',
-					teamGuest: {name: 'Broke Boys', src: bb}
+					teamGuest: {name: 'Broke Boys', src: bb, isWhite: true}
 				},
 				{
 					id: 6,
-					teamHome: {name: 'Амкал', src: amkal},
+					teamHome: {name: 'Амкал', src: amkal, isWhite: true},
 					date: '17.02.2024',
 					time: '-',
-					teamGuest: {name: 'Родина', src: rodina}
+					teamGuest: {name: 'Родина', src: rodina, isWhite: false}
 				},
 				{
 					id: 7,

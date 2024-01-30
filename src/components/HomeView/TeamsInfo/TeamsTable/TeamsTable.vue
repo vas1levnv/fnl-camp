@@ -36,6 +36,10 @@ const props = defineProps(['teamsFirst', 'teamsSecond'])
 @media (max-width: 1024px) {
 	.teams-table{
 		gap: 1.5rem;
+		
+		&__text{
+			font-size: 1.5rem;
+		}
 	}
 }
 
@@ -46,6 +50,9 @@ const props = defineProps(['teamsFirst', 'teamsSecond'])
 		
 		h2{
 			font-size: 2rem;
+		}
+		&__text{
+			font-size: 1rem;
 		}
 	}
 }

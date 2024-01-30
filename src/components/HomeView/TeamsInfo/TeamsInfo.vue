@@ -33,4 +33,10 @@ const teamsSecond = store.state.teamsSecond
 		padding: 5rem 0;
 	}
 }
+
+@media (max-width: 768px) {
+	.teams-info {
+		padding: 3rem 0 2rem;
+	}
+}
 </style>
