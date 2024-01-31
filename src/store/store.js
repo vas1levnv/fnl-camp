@@ -402,7 +402,22 @@ export const store = createStore({
 					title: 'Послематчевые буллитальти',
 					body: 'Перед каждой парой бьющих футболистов путём жребия определяется будут игроки бить пенальти или будет совершён выход один на один с вратарём'
 				},
-			]
+			],
+			
+		}
+	},
+	mutations: {
+		changeLinkOnTeams(state, {item, name}) {
+			state.teamsFirst.forEach((el) => {
+				if(el.name === name) {
+					el.link = item
+				}
+			})
+			state.teamsSecond.forEach((el) => {
+				if(el.name === name) {
+					el.link = item
+				}
+			})
 		}
 	}
 })

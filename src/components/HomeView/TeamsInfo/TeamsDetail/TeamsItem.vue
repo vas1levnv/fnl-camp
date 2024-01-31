@@ -6,7 +6,7 @@
 				<img :src="item.src" :alt="item.name">
 			</div>
 			<div class="teams-detail-item__name">{{ item.name }}</div>
-			<custom-button>О команде</custom-button>
+			<custom-button @click="scrollToElement(item)">О команде</custom-button>
 		</div>
 	</div>
 </template>
@@ -15,6 +15,11 @@
 import CustomButton from "@/components/UI/CustomButton.vue";
 
 const props = defineProps(['title', 'teams'])
+
+const scrollToElement = (item) => {
+	item.link.scrollIntoView({behavior: "smooth"});
+}
+
 </script>
 
 <style scoped lang="scss">
@@ -87,7 +92,7 @@ const props = defineProps(['title', 'teams'])
 				height: 70px;
 			}
 			
-			&__name{
+			&__name {
 				font-size: 1.25rem;
 			}
 		}
@@ -99,6 +104,7 @@ const props = defineProps(['title', 'teams'])
 		&-item {
 			display: grid;
 			grid-template-columns: auto 1fr;
+			
 			&__img {
 				grid-row: 1/3;
 			}
