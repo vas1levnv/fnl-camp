@@ -7,12 +7,17 @@ import fakel from "@/assets/img/fakel.png";
 import avangard from "@/assets/img/avangard.png";
 import khimki from "@/assets/img/khimki.png";
 import enisei from "@/assets/img/Enisei.png";
+import eniseiTeam from "@/assets/img/eniseiTeam.png";
 import spartak from "@/assets/img/spartak.png";
+import spartakTeam from "@/assets/img/spartakTeam.png";
 import bb from "@/assets/img/bb.png";
+import bbTeam from "@/assets/img/brokeboysTeam.png";
 import rodina from "@/assets/img/rodina.png";
+import rodinaTeam from "@/assets/img/rodinaTeam.png";
 import amkal from "@/assets/img/Amkal.png";
+import amkalTeam from "@/assets/img/amkalTeam.png";
 import petropavl from "@/assets/img/petropavl.png";
-import teamDesc1 from "@/assets/img/teamDesc1.png";
+import petropavlTeam from "@/assets/img/petropavlTeam.png";
 import personTeam from "@/assets/img/personTeam.png";
 import sponsorKinopoisk from "@/assets/img/sponsor-kinopoisk.png"
 import sponsorBetboom from "@/assets/img/sponsor-betboom.png"
@@ -163,7 +168,7 @@ export const store = createStore({
 				{
 					id: 1,
 					name: 'Родина',
-					src: teamDesc1,
+					src: rodinaTeam,
 					year: '2015 год',
 					description: 'По итогам первой части сезона «Родина» занимает 7 место в МЕЛБЕТ-Первой Лиге. В прошлом сезоне клуб принимал участие в стыковых матчах за выход в РПЛ против «Пари НН»',
 					championship: 'МЕЛБЕТ-Первая Лига',
@@ -197,7 +202,7 @@ export const store = createStore({
 				{
 					id: 2,
 					name: 'Енисей',
-					src: teamDesc1,
+					src: eniseiTeam,
 					year: '1937 год',
 					description: 'По итогам первой части сезона «Енисей» занимает 10 место в МЕЛБЕТ-Первой Лиге. В прошлом сезоне клуб принимал участие в стыковых матчах за выход в РПЛ против «Факела». ',
 					championship: 'МЕЛБЕТ-Первая Лига',
@@ -232,7 +237,7 @@ export const store = createStore({
 				{
 					id: 3,
 					name: 'Спартак-2',
-					src: teamDesc1,
+					src: spartakTeam,
 					year: '2013 год',
 					description: 'Первым турниром, в котором команда примет участие после возрождения станет Кинопоиск Camp. Во второй команде «Спартака» получали игровой опыт Илья Кутепов, Максим Глушенков, Зелимхан Бакаев и другие российские футболисты.',
 					championship: null,
@@ -253,7 +258,7 @@ export const store = createStore({
 				{
 					id: 4,
 					name: 'Амкал',
-					src: teamDesc1,
+					src: amkalTeam,
 					year: '2018 год',
 					description: 'Старейший и один из самых известных (2,8 млн. подписчиков на YouTube) медийных футбольный клубов.',
 					championship: 'Winline Media Football League',
@@ -289,7 +294,7 @@ export const store = createStore({
 				{
 					id: 5,
 					name: 'Broke Boys',
-					src: teamDesc1,
+					src: bbTeam,
 					year: '2022 год',
 					description: 'За два года существования Broke Boys стали одной из самых обсуждаемых и успешных в футбольном плане медийных команд.',
 					championship: 'Winline Media Football League',
@@ -329,7 +334,7 @@ export const store = createStore({
 				{
 					id: 6,
 					name: 'Кызыл-Жар',
-					src: teamDesc1,
+					src: petropavlTeam,
 					year: '1968 год',
 					description: 'С 2020 года “Кызыл-Жар” выступает в Казахстанской Премьер-Лиге. По итогам сезона клуб из Петропавловска занял 5 место',
 					championship: 'Казахстанская Премьер-Лига',
