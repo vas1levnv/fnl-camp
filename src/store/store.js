@@ -22,13 +22,13 @@ export const store = createStore({
 	state() {
 		return {
 			winnersTeam: [
-				{id: 1, years: '2012, 2013, 2018', name: 'Урал', src: ural},
-				{id: 2, years: '2014', name: 'Луч-Энергия', src: luch},
-				{id: 3, years: '2015', name: 'Волгарь', src: volgar},
-				{id: 4, years: '2016', name: 'Оренбург', src: orenburg},
-				{id: 5, years: '2017', name: 'Факел', src: fakel},
-				{id: 6, years: '2019', name: 'Авангард', src: avangard},
-				{id: 7, years: '2020', name: 'Химки', src: khimki},
+				{id: 1, years: '2012, 2013, 2018', places: 3, name: 'Урал', src: ural},
+				{id: 2, years: '2014', places: 1, name: 'Луч-Энергия', src: luch},
+				{id: 3, years: '2015', places: 1, name: 'Волгарь', src: volgar},
+				{id: 4, years: '2016', places: 1, name: 'Оренбург', src: orenburg},
+				{id: 5, years: '2017', places: 1, name: 'Факел', src: fakel},
+				{id: 6, years: '2019', places: 1, name: 'Авангард', src: avangard},
+				{id: 7, years: '2020', places: 1, name: 'Химки', src: khimki},
 			],
 			teamsFirst: [
 				{

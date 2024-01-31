@@ -7,7 +7,7 @@
 					<div class="winners-item" :key="item.id" v-for="item in teams">
 						<div class="winners-item__icon">
 							<place-icon></place-icon>
-							<div class="winners-item__icon-place">{{ item.id }}</div>
+							<div class="winners-item__icon-place">{{ item.places }}</div>
 						</div>
 						<div class="winners-item__years">{{ item.years }}</div>
 						<div class="winners-item__name">{{ item.name }}</div>
