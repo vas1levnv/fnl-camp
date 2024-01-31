@@ -124,4 +124,17 @@ const store = useStore()
 	}
 }
 
+@media (max-width: 768px) {
+	.rules {
+		
+		padding: 2rem 0;
+		
+		&-list {
+			grid-template-columns: 1fr;
+			top: 0;
+			margin-top: 2rem;
+		}
+	}
+}
+
 </style>
