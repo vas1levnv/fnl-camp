@@ -18,10 +18,27 @@ import amkal from "@/assets/img/Amkal.png";
 import amkalTeam from "@/assets/img/amkalTeam.png";
 import petropavl from "@/assets/img/petropavl.png";
 import petropavlTeam from "@/assets/img/petropavlTeam.png";
-import personTeam from "@/assets/img/personTeam.png";
 import sponsorKinopoisk from "@/assets/img/sponsor-kinopoisk.png"
 import sponsorBetboom from "@/assets/img/sponsor-betboom.png"
 import sponsorSportmaster from "@/assets/img/sponsor-sportmaster.png"
+import playerRodina1 from "@/assets/img/players/playerRodina1.png"
+import playerRodina2 from "@/assets/img/players/playerRodina2.png"
+import playerRodina3 from "@/assets/img/players/playerRodina3.png"
+import playerEnisei1 from "@/assets/img/players/playerEnisei1.png"
+import playerEnisei2 from "@/assets/img/players/playerEnisei2.png"
+import playerEnisei3 from "@/assets/img/players/playerEnisei3.png"
+import playerSpartak1 from "@/assets/img/players/playerSpartak1.png"
+import playerSpartak2 from "@/assets/img/players/playerSpartak2.png"
+import playerSpartak3 from "@/assets/img/players/playerSpartak3.png"
+import playerAmkal1 from "@/assets/img/players/playerAmkal1.png"
+import playerAmkal2 from "@/assets/img/players/playerAmkal2.png"
+import playerAmkal3 from "@/assets/img/players/playerAmkal3.png"
+import playerBB1 from "@/assets/img/players/playerBB1.png"
+import playerBB2 from "@/assets/img/players/playerBB2.png"
+import playerBB3 from "@/assets/img/players/playerBB3.png"
+import playerPetr1 from "@/assets/img/players/playerPetr1.png"
+import playerPetr2 from "@/assets/img/players/playerPetr2.png"
+import playerPetr3 from "@/assets/img/players/playerPetr3.png"
 
 export const store = createStore({
 	state() {
@@ -184,17 +201,17 @@ export const store = createStore({
 					persons: [
 						{
 							id: 1,
-							src: personTeam,
-							name: 'Максим Турищев'
-						},
-						{
-							id: 2,
-							src: personTeam,
+							src: playerRodina1,
 							name: 'Иван Тимошенко'
 						},
 						{
+							id: 2,
+							src: playerRodina2,
+							name: 'Максим Турищев'
+						},
+						{
 							id: 3,
-							src: personTeam,
+							src: playerRodina3,
 							name: 'Руслан Фищенко'
 						}
 					],
@@ -219,18 +236,18 @@ export const store = createStore({
 					persons: [
 						{
 							id: 1,
-							src: personTeam,
+							src: playerEnisei1,
 							name: 'Херман Феррейра'
 						},
 						{
 							id: 2,
-							src: personTeam,
-							name: 'Василий Кичин'
+							src: playerEnisei2,
+							name: 'Андрей Тихонов'
 						},
 						{
 							id: 3,
-							src: personTeam,
-							name: 'Андрей Тихонов'
+							src: playerEnisei3,
+							name: 'Василий Кичин'
 						}
 					],
 				},
@@ -250,8 +267,18 @@ export const store = createStore({
 					persons: [
 						{
 							id: 1,
-							src: personTeam,
+							src: playerSpartak1,
+							name: 'Максим Офицеров'
+						},
+						{
+							id: 2,
+							src: playerSpartak2,
 							name: 'Дмитрий Комбаров'
+						},
+						{
+							id: 3,
+							src: playerSpartak3,
+							name: 'Дмитрий Иванников'
 						},
 					],
 				},
@@ -275,17 +302,17 @@ export const store = createStore({
 					persons: [
 						{
 							id: 1,
-							src: personTeam,
-							name: 'Герман El Classico'
+							src: playerAmkal1,
+							name: 'Герман El Classico'
 						},
 						{
 							id: 2,
-							src: personTeam,
-							name: 'Прокоп'
+							src: playerAmkal2,
+							name: 'Михаил Прокопьев'
 						},
 						{
 							id: 3,
-							src: personTeam,
+							src: playerAmkal3,
 							name: 'Андрей Сибскана'
 						},
 					
@@ -311,23 +338,18 @@ export const store = createStore({
 					persons: [
 						{
 							id: 1,
-							src: personTeam,
+							src: playerBB1,
 							name: 'Дмитрий Егоров'
 						},
 						{
 							id: 2,
-							src: personTeam,
+							src: playerBB2,
 							name: 'Артем Райзен'
 						},
 						{
 							id: 3,
-							src: personTeam,
-							name: 'Илья Мазуров'
-						},
-						{
-							id: 3,
-							src: personTeam,
-							name: 'Алишер Рахимов'
+							src: playerBB3,
+							name: 'Иван Зириков'
 						},
 					],
 				},
@@ -355,17 +377,17 @@ export const store = createStore({
 					persons: [
 						{
 							id: 1,
-							src: personTeam,
-							name: 'Алексей Щебетун'
+							src: playerPetr1,
+							name: 'Бекзат Шадманов'
 						},
 						{
 							id: 2,
-							src: personTeam,
+							src: playerPetr2,
 							name: 'Владислав Сорокин'
 						},
 						{
 							id: 3,
-							src: personTeam,
+							src: playerPetr3,
 							name: 'Евгений Березкин'
 						},
 					],
@@ -408,7 +430,6 @@ export const store = createStore({
 					body: 'Перед каждой парой бьющих футболистов путём жребия определяется будут игроки бить пенальти или будет совершён выход один на один с вратарём'
 				},
 			],
-			
 		}
 	},
 	mutations: {

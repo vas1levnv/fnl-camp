@@ -30,7 +30,7 @@ const teams = store.state.winnersTeam
 
 <style scoped lang="scss">
 .winners {
-	background: var(--linear-gradient);
+	background: var(--orange);
 	
 	&-wrapper {
 		padding: 5rem 0 10rem;

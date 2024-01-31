@@ -7,24 +7,51 @@
 				</div>
 			</div>
 		</div>
+		<div class="descr-circle">
+			<circle-bg/>
+		</div>
 	</div>
 </template>
 
 <script setup>
 import {useStore} from "vuex";
 import TeamsDescriptionItem from "@/components/HomeView/TeamsDescription/TeamsDescriptionItem.vue";
+import CircleBg from "@/components/icons/circle-bg.vue";
 
 const store = useStore()
 const teams = store.state.teams
-
 
 </script>
 
 <style lang="scss" scoped>
 .descr {
+	position: relative;
+	
 	&-wrapper {
 		padding: 6.25rem 0;
 	}
+	
+	&-circle {
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 100%;
+		transform: rotate(180deg);
+	}
 }
+
+@media (max-width: 1024px) {
+	.descr {
+		&-circle {
+			bottom: -5px;
+			height: 100px;
+			
+			svg {
+				height: 100%;
+			}
+		}
+	}
+}
+
 
 </style>
