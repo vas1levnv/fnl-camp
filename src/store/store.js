@@ -14,7 +14,6 @@ import amkal from "@/assets/img/Amkal.png";
 import petropavl from "@/assets/img/petropavl.png";
 import teamDesc1 from "@/assets/img/teamDesc1.png";
 import personTeam from "@/assets/img/personTeam.png";
-import teamDesc2 from "@/assets/img/teamDesc2.png";
 import sponsorKinopoisk from "@/assets/img/sponsor-kinopoisk.png"
 import sponsorBetboom from "@/assets/img/sponsor-betboom.png"
 import sponsorSportmaster from "@/assets/img/sponsor-sportmaster.png"
@@ -198,7 +197,7 @@ export const store = createStore({
 				{
 					id: 2,
 					name: 'Енисей',
-					src: teamDesc2,
+					src: teamDesc1,
 					year: '1937 год',
 					description: 'По итогам первой части сезона «Енисей» занимает 10 место в МЕЛБЕТ-Первой Лиге. В прошлом сезоне клуб принимал участие в стыковых матчах за выход в РПЛ против «Факела». ',
 					championship: 'МЕЛБЕТ-Первая Лига',
@@ -254,7 +253,7 @@ export const store = createStore({
 				{
 					id: 4,
 					name: 'Амкал',
-					src: teamDesc2,
+					src: teamDesc1,
 					year: '2018 год',
 					description: 'Старейший и один из самых известных (2,8 млн. подписчиков на YouTube) медийных футбольный клубов.',
 					championship: 'Winline Media Football League',
@@ -330,7 +329,7 @@ export const store = createStore({
 				{
 					id: 6,
 					name: 'Кызыл-Жар',
-					src: teamDesc2,
+					src: teamDesc1,
 					year: '1968 год',
 					description: 'С 2020 года “Кызыл-Жар” выступает в Казахстанской Премьер-Лиге. По итогам сезона клуб из Петропавловска занял 5 место',
 					championship: 'Казахстанская Премьер-Лига',
