@@ -16,7 +16,7 @@ button {
 	padding: 1rem 2.5rem;
 	border-radius: 1rem;
 	font-size: 1.25rem;
-	font-weight: 500;
+	font-weight: 400;
 	cursor: pointer;
 	white-space: nowrap;
 }

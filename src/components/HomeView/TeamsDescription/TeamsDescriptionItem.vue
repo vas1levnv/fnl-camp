@@ -101,6 +101,10 @@ onMounted(() => {
 				font-size: 1rem;
 			}
 		}
+		
+		.orange-text{
+			font-weight: 700;
+		}
 	}
 }
 
@@ -109,10 +113,6 @@ onMounted(() => {
 	.descr {
 		&-item {
 			font-size: 1rem;
-			
-			.orange-text{
-				font-weight: 700;
-			}
 		}
 	}
 }
