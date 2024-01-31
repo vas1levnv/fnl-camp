@@ -2,9 +2,14 @@
 	<footer class="footer" :style="{'background-image': 'url(' + footerBg + ')'}">
 		<div class="container">
 			<div class="footer-wrapper">
-				<a href="#" class="footer-logo">
-					<fnl-icon/>
-				</a>
+				<div class="footer-sponsors">
+					<a href="#" class="footer-logo">
+						<fnl-icon/>
+					</a>
+					<a href="#"><img :src="kinopoisk" alt="kinopoisk"></a>
+					<a href="#"><img :src="betboom" alt="betboom"></a>
+					<a href="#"><img :src="sportmaster" alt="sportmaster"></a>
+				</div>
 				<div class="footer-list">
 					<a href="#">
 						<telegram-icon/>
@@ -27,6 +32,10 @@ import FnlIcon from "@/components/icons/FnlIcon.vue";
 import TelegramIcon from "@/components/icons/TelegramIcon.vue";
 import VkIcon from "@/components/icons/VkIcon.vue";
 import YoutubeIcon from "@/components/icons/YoutubeIcon.vue";
+import sportmaster from "@/assets/img/footer-sportmaster.png"
+import betboom from "@/assets/img/footer-betboom.png"
+import kinopoisk from "@/assets/img/footer-kinopoisk.png"
+
 </script>
 
 <style scoped lang="scss">
@@ -44,12 +53,20 @@ import YoutubeIcon from "@/components/icons/YoutubeIcon.vue";
 		padding: 5rem 0;
 	}
 	
-	&-logo{
+	&-logo {
+		display: block;
 		width: 56px;
-		svg{
+		
+		svg {
 			width: 100%;
 			height: 100%;
 		}
+	}
+	
+	&-sponsors{
+		display: flex;
+		align-items: center;
+		gap: 2.5rem;
 	}
 	
 	&-list {
@@ -60,19 +77,37 @@ import YoutubeIcon from "@/components/icons/YoutubeIcon.vue";
 }
 
 @media (max-width: 1024px) {
-	.footer{
+	.footer {
 		&-wrapper {
 			min-height: 300px;
+			flex-direction: column;
+			align-items: center;
+			justify-content: end;
+			gap: 1rem;
 		}
 	}
 }
 
 @media (max-width: 768px) {
-	.footer{
+	.footer {
 		&-wrapper {
 			height: 20vh;
 			min-height: 200px;
 			padding: 2rem 0;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.footer {
+		
+		&-wrapper {
+			height: auto;
+		}
+		
+		&-sponsors {
+			flex-direction: column;
+			gap: 1rem;
 		}
 	}
 }

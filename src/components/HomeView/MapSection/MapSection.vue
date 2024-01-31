@@ -10,8 +10,8 @@ import map from '@/assets/img/map.png'
 .map {
 	max-height: 420px;
 	min-height: 250px;
-	height: 25vw;
-	background-position: right;
+	height: 20vw;
+	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
