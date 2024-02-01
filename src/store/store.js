@@ -394,9 +394,14 @@ export const store = createStore({
 				}
 			],
 			sponsors: [
-				{id: 1, text: 'Титульный партнер', src: sponsorKinopoisk},
-				{id: 2, text: 'Генеральный партнер', src: sponsorBetboom},
-				{id: 3, text: 'Технический партнер', src: sponsorSportmaster},
+				{id: 1, text: 'Титульный партнер', src: sponsorKinopoisk, link: 'https://hd.kinopoisk.ru/sport/'},
+				{id: 2, text: 'Генеральный партнер', src: sponsorBetboom, link: 'https://betboom.ru/'},
+				{
+					id: 3,
+					text: 'Технический партнер',
+					src: sponsorSportmaster,
+					link: 'https://www.sportmaster.ru/promo/2149276/'
+				},
 			],
 			rules: [
 				{

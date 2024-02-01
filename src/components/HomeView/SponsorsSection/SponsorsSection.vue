@@ -4,10 +4,10 @@
 			<div class="sponsors-section-wrapper">
 				<h2>Спонсоры турнира</h2>
 				<div class="sponsors-section-list">
-					<div class="sponsors-section-item" v-for="item in store.state.sponsors" :key="item.id">
+					<a :href="item.link" target="_blank" class="sponsors-section-item" v-for="item in store.state.sponsors" :key="item.id">
 						<div class="sponsors-section-item__img"><img :src="item.src" alt="item.text"></div>
 						<div>{{ item.text }}</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -59,6 +59,7 @@ const store = useStore()
 @media (max-width: 1024px) {
 	.sponsors-section {
 		font-size: 1.5rem;
+		
 		h2 {
 			font-size: 2rem;
 		}
@@ -68,7 +69,7 @@ const store = useStore()
 			padding: 2rem 0 3rem;
 		}
 		
-		&-item{
+		&-item {
 			gap: 1rem;
 		}
 	}

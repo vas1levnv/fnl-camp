@@ -3,21 +3,21 @@
 		<div class="container">
 			<div class="footer-wrapper">
 				<div class="footer-sponsors">
-					<a href="#" class="footer-logo">
+					<router-link to="/" class="footer-logo">
 						<fnl-icon/>
-					</a>
-					<a href="#"><img :src="kinopoisk" alt="kinopoisk"></a>
-					<a href="#"><img :src="betboom" alt="betboom"></a>
-					<a href="#"><img :src="sportmaster" alt="sportmaster"></a>
+					</router-link>
+					<a href="https://hd.kinopoisk.ru/sport/" target="_blank"><img :src="kinopoisk" alt="kinopoisk"></a>
+					<a href="https://betboom.ru" target="_blank"><img :src="betboom" alt="betboom"></a>
+					<a href="https://www.sportmaster.ru/promo/2149276/" target="_blank"><img :src="sportmaster" alt="sportmaster"></a>
 				</div>
 				<div class="footer-list">
-					<a href="#">
+					<a href="https://t.me/FNL_org" target="_blank">
 						<telegram-icon/>
 					</a>
-					<a href="#">
+					<a href="https://vk.com/fnl_org" target="_blank">
 						<vk-icon/>
 					</a>
-					<a href="#">
+					<a href="https://youtube.com/@fnl_tv?si=QLuaeEaodx7tplwf" target="_blank">
 						<youtube-icon/>
 					</a>
 				</div>
@@ -63,7 +63,7 @@ import kinopoisk from "@/assets/img/footer-kinopoisk.png"
 		}
 	}
 	
-	&-sponsors{
+	&-sponsors {
 		display: flex;
 		align-items: center;
 		gap: 2.5rem;

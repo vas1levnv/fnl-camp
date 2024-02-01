@@ -14,7 +14,7 @@
 <style scoped>
 .move-to-top {
 	position: fixed;
-	bottom: 3rem;
+	bottom: 10rem;
 	right: 3rem;
 }
 

@@ -42,6 +42,10 @@ const teams = store.state.teams
 
 @media (max-width: 1024px) {
 	.descr {
+		&-wrapper {
+			padding: 4rem 0;
+		}
+		
 		&-circle {
 			bottom: -5px;
 			height: 100px;
@@ -53,5 +57,12 @@ const teams = store.state.teams
 	}
 }
 
+@media (max-width: 768px) {
+	.descr {
+		&-wrapper {
+			padding: 2rem 0;
+		}
+	}
+}
 
 </style>

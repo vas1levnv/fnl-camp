@@ -5,9 +5,9 @@
 			<table>
 				<tr>
 					<th></th>
+					<th></th>
 					<th>Дата</th>
 					<th>Время</th>
-					<th></th>
 				</tr>
 				<tr v-for="item in games" :key="item.id">
 					<td>
@@ -18,16 +18,16 @@
 							<div>{{ item.teamHome.name }}</div>
 						</div>
 					</td>
-					<td>{{ item.date }}</td>
-					<td>{{ item.time }}</td>
 					<td>
 						<div class="calendar-section__team">
-							<div>{{ item.teamGuest.name }}</div>
 							<div class="calendar-section__team-img" v-if="item.teamGuest.src" :class="{white: item.teamGuest.isWhite}">
 								<img :src="item.teamGuest.src" :alt="item.teamGuest.name">
 							</div>
+							<div>{{ item.teamGuest.name }}</div>
 						</div>
 					</td>
+					<td>{{ item.date }}</td>
+					<td>{{ item.time }}</td>
 				</tr>
 			</table>
 		</div>
@@ -47,7 +47,7 @@ const games = store.state.games
 	margin-top: 5rem;
 	text-align: center;
 	
-	&-wrapper{
+	&-wrapper {
 		max-width: 100%;
 		overflow-x: auto;
 	}
@@ -70,7 +70,7 @@ const games = store.state.games
 			}
 			
 			&:nth-child(even) {
-				background: var(--linear-gradient);
+				background: var(--orange);
 				color: white;
 			}
 		}
@@ -87,18 +87,18 @@ const games = store.state.games
 			font-weight: 500;
 			padding: 0.5rem;
 			
-			&:first-child {
+			&:first-child, &:nth-child(2) {
 				text-align: start;
 				padding-left: 1.5rem;
 			}
 			
 			&:last-child {
-				text-align: end;
+				//text-align: end;
 				padding-right: 1.5rem;
 				
-				.calendar-section__team {
-					justify-content: flex-end;
-				}
+				//.calendar-section__team {
+				//	justify-content: flex-end;
+				//}
 			}
 		}
 	}
@@ -156,6 +156,9 @@ const games = store.state.games
 		
 		table {
 			
+			th {
+				font-size: 1rem;
+			}
 			
 			td {
 				font-size: 1rem;

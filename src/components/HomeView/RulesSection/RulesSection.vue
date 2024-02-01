@@ -134,6 +134,13 @@ const store = useStore()
 			top: 0;
 			margin-top: 2rem;
 		}
+		
+		&-item {
+			&__title {
+				font-size: 1.125rem;
+			}
+		}
+		
 	}
 }
 

@@ -1,5 +1,5 @@
 <template>
-	<a href="#" class="video" :style="{ 'background-image': 'url(' + bg + ')' }">
+	<a href="https://hd.kinopoisk.ru/sport/" target="_blank" class="video" :style="{ 'background-image': 'url(' + bg + ')' }">
 		<div class="video-circle">
 			<circle-bg/>
 		</div>
