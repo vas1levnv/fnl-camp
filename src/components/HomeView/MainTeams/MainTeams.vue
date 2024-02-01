@@ -66,6 +66,7 @@ const scrollToElement = (item) => {
 		
 		img {
 			max-width: 100%;
+			width: 100%;
 		}
 	}
 	
@@ -259,6 +260,7 @@ const scrollToElement = (item) => {
 			
 			img {
 				height: 100%;
+				width: auto;
 				object-fit: cover;
 			}
 		}
