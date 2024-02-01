@@ -1,6 +1,8 @@
 <template>
 	<div class="teams">
-		<div class="teams-bg" :style="{ 'background-image': 'url(' + banner + ')' }"></div>
+		<div class="teams-bg">
+			<img :src="banner" alt="camp">
+		</div>
 		<div class="teams-wrapper">
 			<div class="container">
 				<div class="teams-list">
@@ -37,7 +39,7 @@
 
 <script setup>
 import {useStore} from "vuex";
-import banner from '@/assets/img/main-stadium.png'
+import banner from '@/assets/img/homeBg.png'
 import KinopoiskIcon from "@/components/icons/KinopoiskIcon.vue";
 import CustomButton from "@/components/UI/CustomButton.vue";
 
@@ -59,10 +61,12 @@ const scrollToElement = (item) => {
 	color: white;
 	
 	&-bg {
-		height: 560px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+		margin-bottom: -6px;
+		width: 100%;
+		
+		img {
+			max-width: 100%;
+		}
 	}
 	
 	&-text {
@@ -73,15 +77,15 @@ const scrollToElement = (item) => {
 		margin: 0 auto 5rem;
 	}
 	
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.00) 53.81%), linear-gradient(0deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.48) 100%);
-	}
+	//&:before {
+	//	content: '';
+	//	position: absolute;
+	//	top: 0;
+	//	left: 0;
+	//	width: 100%;
+	//	height: 100%;
+	//	background: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.00) 53.81%), linear-gradient(0deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.48) 100%);
+	//}
 	
 	&-wrapper {
 		position: relative;
@@ -110,7 +114,7 @@ const scrollToElement = (item) => {
 	
 	&-icon {
 		position: absolute;
-		top: -50%;
+		top: -30%;
 		left: 50%;
 		transform: translateX(-50%);
 		width: 20vw;
@@ -150,15 +154,15 @@ const scrollToElement = (item) => {
 		background-position: top;
 		
 		&-icon {
-			top: -40%;
+			top: -20%;
 			width: 200px;
 		}
 		
-		&-links{
+		&-links {
 			display: grid;
-			grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+			grid-template-columns: repeat(3, 1fr);
 			
-			&-item{
+			&-item {
 				width: auto;
 			}
 		}
@@ -170,7 +174,7 @@ const scrollToElement = (item) => {
 	.teams {
 		&-list {
 			flex-direction: column;
-			padding: 7.5rem 0 2rem;
+			padding: 10rem 0 2rem;
 			
 			&__left, &__right {
 				width: 100%;
@@ -202,14 +206,14 @@ const scrollToElement = (item) => {
 		}
 		
 		&-icon {
-			top: -40%;
+			top: -23%;
 			width: 200px;
 		}
 		
-		&-bg {
-			max-height: 60vh;
-			min-height: 300px;
-		}
+		//&-bg {
+		//	max-height: 60vh;
+		//	min-height: 300px;
+		//}
 	}
 }
 
@@ -219,13 +223,23 @@ const scrollToElement = (item) => {
 			padding-bottom: 3rem;
 		}
 		
+		&-list {
+			padding-top: 7.5rem;
+		}
+		
 		&-icon {
-			top: -50%;
+			top: -250px;
+			width: 150px;
 		}
 		
 		&-text {
 			font-size: 1rem;
 			margin: 2rem 0;
+		}
+		
+		&-links {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 }
@@ -240,14 +254,29 @@ const scrollToElement = (item) => {
 			}
 		}
 		
+		&-bg {
+			height: 250px;
+			
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		
 		&-img {
 			max-height: 70px;
 		}
 		
 		&-icon {
-			top: -300px;
-			width: 150px;
+			top: -275px;
+			width: 125px;
 		}
+		
+		&-links {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+		}
+		
 	}
 }
 </style>

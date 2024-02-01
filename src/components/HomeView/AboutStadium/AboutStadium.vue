@@ -1,5 +1,5 @@
 <template>
-	<div class="about-stadium" ref="stadium">
+	<div class="about-stadium">
 		<div class="container">
 			<div class="about-stadium-wrapper">
 				<div class="about-stadium__title">О стадионе</div>
@@ -16,15 +16,7 @@
 </template>
 
 <script setup>
-import {onMounted, ref} from "vue";
-import {useStore} from "vuex";
 
-const store = useStore()
-const stadium = ref()
-
-onMounted(() => {
-	store.commit('addAnchors', {id: 6, name: 'Стадион', link: stadium.value})
-})
 </script>
 
 <style scoped lang="scss">

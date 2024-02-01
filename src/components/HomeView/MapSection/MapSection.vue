@@ -1,5 +1,5 @@
 <template>
-	<div class="map" :style="{ 'background-image': 'url(' + map + ')' }">
+	<div class="map" ref="stadium" :style="{ 'background-image': 'url(' + map + ')' }">
 		<div class="map-content">
 			<div>
 				<location-icon/>
@@ -15,6 +15,16 @@
 <script setup>
 import map from '@/assets/img/map.png'
 import LocationIcon from "@/components/icons/location-icon.vue";
+
+import {onMounted, ref} from "vue";
+import {useStore} from "vuex";
+
+const store = useStore()
+const stadium = ref()
+
+onMounted(() => {
+	store.commit('addAnchors', {id: 6, name: 'Стадион', link: stadium.value})
+})
 </script>
 
 <style scoped lang="scss">

@@ -3,9 +3,9 @@
 		<div class="container">
 			<div class="footer-wrapper">
 				<div class="footer-sponsors">
-					<router-link to="/" class="footer-logo">
+					<a href="https://1fnl.ru/" target="_blank" class="footer-logo">
 						<fnl-icon/>
-					</router-link>
+					</a>
 					<a href="https://hd.kinopoisk.ru/sport/" target="_blank"><img :src="kinopoisk" alt="kinopoisk"></a>
 					<a href="https://betboom.ru" target="_blank"><img :src="betboom" alt="betboom"></a>
 					<a href="https://www.sportmaster.ru/promo/2149276/" target="_blank"><img :src="sportmaster" alt="sportmaster"></a>
