@@ -99,7 +99,7 @@ const scrollToElement = (item) => {
 	}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
 	.teams-detail {
 		&-item {
 			display: grid;

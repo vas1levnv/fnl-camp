@@ -43,7 +43,7 @@ const teams = store.state.teams
 @media (max-width: 1024px) {
 	.descr {
 		&-wrapper {
-			padding: 4rem 0;
+			padding: 4rem 0 8rem;
 		}
 		
 		&-circle {
@@ -60,7 +60,7 @@ const teams = store.state.teams
 @media (max-width: 768px) {
 	.descr {
 		&-wrapper {
-			padding: 2rem 0;
+			padding: 2rem 0 6rem;
 		}
 	}
 }

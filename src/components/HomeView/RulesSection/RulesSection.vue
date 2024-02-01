@@ -6,6 +6,7 @@
 				<div class="rules-list">
 					<div class="rules-item" v-for="item in store.state.rules" :key="item.id">
 						<div class="rules-item__title">{{ item.title }}</div>
+						<div v-if="item.subtitle" class="rules-item__subtitle">{{ item.subtitle }}</div>
 						<div class="rules-item__body">{{ item.body }}</div>
 					</div>
 				</div>
@@ -46,7 +47,6 @@ const store = useStore()
 		border-radius: 2rem;
 		color: white;
 		padding: 3rem;
-		gap: 1.5rem;
 		
 		&:nth-child(2), &:nth-child(5) {
 			position: relative;
@@ -58,8 +58,14 @@ const store = useStore()
 			font-weight: 700;
 		}
 		
+		&__subtitle {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+		
 		&__body {
 			font-size: 1.25rem;
+			margin-top: 1rem;
 		}
 	}
 }
@@ -71,16 +77,19 @@ const store = useStore()
 		}
 		
 		&-item {
-			gap: 0.5rem;
 			padding: 2rem;
 			
 			&__title {
 				font-size: 1.5rem;
-				margin-bottom: 0.5rem;
+			}
+			
+			&__subtitle {
+				font-size: 1rem;
 			}
 			
 			&__body {
 				font-size: 1rem;
+				margin-top: 0.5rem;
 			}
 		}
 	}

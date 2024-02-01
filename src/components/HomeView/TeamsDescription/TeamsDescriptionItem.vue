@@ -152,12 +152,12 @@ onMounted(() => {
 @media (max-width: 1024px) {
 	.descr {
 		&-item {
-			flex-direction: column-reverse;
+			flex-direction: column;
 			gap: 2rem;
 			margin-bottom: 2rem;
 			
 			&:nth-child(2n) {
-				flex-direction: column-reverse;
+				flex-direction: column;
 			}
 			
 			&__img {
