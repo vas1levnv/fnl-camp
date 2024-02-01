@@ -186,4 +186,32 @@ onMounted(() => {
 	}
 }
 
+
+@media (max-width: 576px) {
+	.descr {
+		&-item {
+			&__persons {
+				&-list {
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					gap: 0.5rem;
+				}
+				
+				&-item {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					img {
+						width: 100%;
+					}
+				}
+				
+				&-name{
+					font-size: 0.875rem;
+				}
+			}
+		}
+	}
+}
+
 </style>
