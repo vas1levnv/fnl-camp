@@ -436,6 +436,7 @@ export const store = createStore({
 					body: 'Перед каждой парой бьющих футболистов путём жребия определяется будут игроки бить пенальти или будет совершён выход один на один с вратарём'
 				},
 			],
+			anchors: []
 		}
 	},
 	mutations: {
@@ -450,6 +451,9 @@ export const store = createStore({
 					el.link = item
 				}
 			})
+		},
+		addAnchors(state, item) {
+			state.anchors = [...state.anchors, item]
 		}
 	}
 })

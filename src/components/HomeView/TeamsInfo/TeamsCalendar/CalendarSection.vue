@@ -1,5 +1,5 @@
 <template>
-	<div class="calendar-section">
+	<div class="calendar-section" ref="calendar">
 		<h2>Расписание игр</h2>
 		<div class="calendar-section-wrapper">
 			<table>
@@ -36,9 +36,16 @@
 
 <script setup>
 import {useStore} from "vuex";
+import {onMounted, ref} from "vue";
 
 const store = useStore()
 const games = store.state.games
+
+const calendar = ref()
+
+onMounted(() => {
+	store.commit('addAnchors', {id: 4, name: 'Календарь', link: calendar.value})
+})
 
 </script>
 

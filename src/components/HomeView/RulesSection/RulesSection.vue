@@ -1,5 +1,5 @@
 <template>
-	<div class="rules">
+	<div class="rules" ref="rules">
 		<div class="container">
 			<div class="rules-wrapper">
 				<h2>Правила</h2>
@@ -17,8 +17,15 @@
 
 <script setup>
 import {useStore} from "vuex";
+import {onMounted, ref} from "vue";
 
+const rules = ref()
 const store = useStore()
+
+onMounted(() => {
+	store.commit('addAnchors', {id: 2, name: 'Правила', link: rules.value})
+})
+
 </script>
 
 <style scoped lang="scss">

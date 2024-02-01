@@ -1,5 +1,5 @@
 <template>
-	<a href="https://hd.kinopoisk.ru/sport/" target="_blank" class="video" :style="{ 'background-image': 'url(' + bg + ')' }">
+	<a href="https://hd.kinopoisk.ru/sport/" target="_blank" class="video" :style="{ 'background-image': 'url(' + bg + ')' }" ref="videoRedirect">
 		<div class="video-circle">
 			<circle-bg/>
 		</div>
@@ -15,6 +15,16 @@ import bg from '@/assets/img/kinopoisk-bg.png'
 import icon from '@/assets/img/kinopoisk-color.png'
 import PlayBtnIcon from "@/components/icons/PlayBtnIcon.vue";
 import CircleBg from "@/components/icons/circle-bg.vue";
+import {onMounted, ref} from "vue";
+import {useStore} from "vuex";
+
+const videoRedirect = ref()
+const store = useStore()
+
+onMounted(() => {
+	store.commit('addAnchors', {id: 1, name: 'Трансляция', link: videoRedirect.value})
+})
+
 </script>
 
 <style scoped lang="scss">

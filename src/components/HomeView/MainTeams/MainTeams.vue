@@ -24,6 +24,11 @@
 					“Урал”. Кстати, команда из Екатеринбурга чаще всех становилась чемпионом турнира: в 2012, 2013 и
 					2018 годах.
 				</div>
+				<div class="teams-links">
+					<custom-button class="teams-links-item" @click="scrollToElement(item)" v-for="item in store.state.anchors" :key="item.id">
+						{{ item.name }}
+					</custom-button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -34,10 +39,15 @@
 import {useStore} from "vuex";
 import banner from '@/assets/img/main-stadium.png'
 import KinopoiskIcon from "@/components/icons/KinopoiskIcon.vue";
+import CustomButton from "@/components/UI/CustomButton.vue";
 
 const store = useStore()
 const teamFirst = store.state.teamsFirst
 const teamsSecond = store.state.teamsSecond
+
+const scrollToElement = (item) => {
+	item.link.scrollIntoView({behavior: "smooth"});
+}
 
 </script>
 
@@ -77,7 +87,7 @@ const teamsSecond = store.state.teamsSecond
 		position: relative;
 		width: 100%;
 		background: var(--orange);
-		
+		padding-bottom: 6rem;
 	}
 	
 	&-list {
@@ -115,15 +125,42 @@ const teamsSecond = store.state.teamsSecond
 		max-width: 850px;
 		margin: 5rem auto 5rem;
 	}
+	
+	&-links {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		
+		gap: 2.5rem;
+		row-gap: 1rem;
+		
+		&-item {
+			line-height: 100%;
+			width: min-content;
+			white-space: normal;
+			background: white;
+			color: var(--orange);
+		}
+	}
 }
 
 
 @media (max-width: 1440px) {
 	.teams {
 		background-position: top;
+		
 		&-icon {
 			top: -40%;
 			width: 200px;
+		}
+		
+		&-links{
+			display: grid;
+			grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+			
+			&-item{
+				width: auto;
+			}
 		}
 	}
 	
@@ -178,6 +215,10 @@ const teamsSecond = store.state.teamsSecond
 
 @media (max-width: 768px) {
 	.teams {
+		&-wrapper {
+			padding-bottom: 3rem;
+		}
+		
 		&-icon {
 			top: -50%;
 		}
