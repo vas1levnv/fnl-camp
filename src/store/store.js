@@ -55,64 +55,64 @@ export const store = createStore({
 			teamsFirst: [
 				{
 					id: 1, name: 'Енисей', src: enisei, link: '#', isWhite: false, stats: {
-						games: 1,
-						win: 1,
-						draw: 1,
-						loose: 1,
-						scores: 1,
-						points: 1,
+						games: 0,
+						win: 0,
+						draw: 0,
+						loose: 0,
+						scores: 0,
+						points: 0,
 					}
 				},
 				{
 					id: 2, name: 'Спартак-2', src: spartak, link: '#', isWhite: false, stats: {
-						games: 1,
-						win: 1,
-						draw: 1,
-						loose: 1,
-						scores: 1,
-						points: 1,
+						games: 0,
+						win: 0,
+						draw: 0,
+						loose: 0,
+						scores: 0,
+						points: 0,
 					}
 				},
 				{
 					id: 3, name: 'Broke Boys', src: bb, link: '#', isWhite: true, stats: {
-						games: 1,
-						win: 1,
-						draw: 1,
-						loose: 1,
-						scores: 1,
-						points: 1,
+						games: 0,
+						win: 0,
+						draw: 0,
+						loose: 0,
+						scores: 0,
+						points: 0,
 					}
 				}
 			],
 			teamsSecond: [
 				{
 					id: 1, name: 'Родина', src: rodina, link: '#', isWhite: false, stats: {
-						games: 1,
-						win: 1,
-						draw: 1,
-						loose: 1,
-						scores: 1,
-						points: 1,
+						games: 0,
+						win: 0,
+						draw: 0,
+						loose: 0,
+						scores: 0,
+						points: 0,
 					}
 				},
 				{
 					id: 2, name: 'Амкал', src: amkal, link: '#', isWhite: true, stats: {
-						games: 1,
-						win: 1,
-						draw: 1,
-						loose: 1,
-						scores: 1,
-						points: 1,
+						games: 0,
+						win: 0,
+						draw: 0,
+						loose: 0,
+						scores: 0,
+						points: 0,
 					}
 				},
 				{
 					id: 3, name: 'Кызыл-Жар', src: petropavl, link: '#', isWhite: false, stats: {
-						games: 1,
-						win: 1,
-						draw: 1,
-						loose: 1,
-						scores: 1,
-						points: 1,
+						games: 0,
+						win: 0,
+						draw: 0,
+						loose: 0,
+						scores: 0,
+						points: 0,
 					}
 				}
 			],

@@ -19,16 +19,16 @@ const props = defineProps(['teamsFirst', 'teamsSecond'])
 	gap: 6rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
 	.teams-detail {
-		gap: 3rem;
-	}
-}
-
-@media (max-width: 1024px) {
-	.teams-detail {
-		grid-template-columns: 1fr;
 		gap: 2rem;
 	}
 }
+@media (max-width: 1200px) {
+	.teams-detail {
+		gap: 2rem;
+		grid-template-columns: 1fr;
+	}
+}
+
 </style>

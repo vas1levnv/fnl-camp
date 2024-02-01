@@ -19,6 +19,7 @@ button {
 	font-weight: 400;
 	cursor: pointer;
 	white-space: nowrap;
+	font-family: "TT Runs", sans-serif;
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,11 @@
 <template>
 	<div class="descr-item" ref="targetTeam">
-		<div class="descr-item__img"><img :src="props.item.src" alt="item.name"></div>
+		<div class="descr-item__img">
+			<img :src="props.item.src" alt="item.name">
+			<div class="descr-item__img-bg">
+				<player-bg/>
+			</div>
+		</div>
 		<div class="descr-item__content">
 			<div class="descr-item__name">{{ props.item.name }}</div>
 			<div class="descr-item__year"><span class="orange-text">Год основания</span> - {{
@@ -36,6 +41,7 @@
 <script setup>
 import {onMounted, ref} from "vue";
 import {useStore} from "vuex";
+import PlayerBg from "@/components/icons/player-bg.vue";
 
 const props = defineProps(['item'])
 
@@ -60,13 +66,39 @@ onMounted(() => {
 		gap: 5rem;
 		
 		&__img {
+			position: relative;
+			
 			img {
 				width: 100%;
 			}
+			
+			&-bg {
+				position: absolute;
+				bottom: 10px;
+				right: 50%;
+				width: 100%;
+				height: 50%;
+				z-index: -1;
+				transform: scale(-1, 1);
+				
+				svg {
+					height: 100%;
+					
+				}
+			}
 		}
+		
 		
 		&:nth-child(2n) {
 			flex-direction: row-reverse;
+			
+			.descr-item__img {
+				&-bg {
+					right: auto;
+					left: 50%;
+					transform: scale(1, 1);
+				}
+			}
 		}
 		
 		&__content {
@@ -102,7 +134,7 @@ onMounted(() => {
 			}
 		}
 		
-		.orange-text{
+		.orange-text {
 			font-weight: 700;
 		}
 	}
