@@ -1,5 +1,5 @@
 <template>
-	<div class="descr" ref="descr">
+	<div class="descr">
 		<div class="container">
 			<div class="descr-wrapper">
 				<div class="descr-list">
@@ -17,15 +17,9 @@
 import {useStore} from "vuex";
 import TeamsDescriptionItem from "@/components/HomeView/TeamsDescription/TeamsDescriptionItem.vue";
 import CircleBg from "@/components/icons/circle-bg.vue";
-import {onMounted, ref} from "vue";
 
 const store = useStore()
 const teams = store.state.teams
-const descr = ref()
-
-onMounted(() => {
-	store.commit('addAnchors', {id: 5, name: 'Команды', link: descr.value})
-})
 
 </script>
 

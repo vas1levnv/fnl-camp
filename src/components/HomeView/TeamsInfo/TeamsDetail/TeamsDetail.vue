@@ -1,5 +1,5 @@
 <template>
-	<div class="teams-detail">
+	<div class="teams-detail" ref="teams">
 		<teams-item title="Первая группа" :teams="props.teamsFirst"/>
 		<teams-item title="Вторая группа" :teams="props.teamsSecond"/>
 	</div>
@@ -7,8 +7,17 @@
 
 <script setup>
 import TeamsItem from "@/components/HomeView/TeamsInfo/TeamsDetail/TeamsItem.vue";
+import {onMounted, ref} from "vue";
+import {useStore} from "vuex";
 
 const props = defineProps(['teamsFirst', 'teamsSecond'])
+const store = useStore()
+
+const teams = ref()
+
+onMounted(() => {
+	store.commit('addAnchors', {id: 5, name: 'Команды', link: teams.value})
+})
 
 </script>
 
@@ -24,6 +33,7 @@ const props = defineProps(['teamsFirst', 'teamsSecond'])
 		gap: 2rem;
 	}
 }
+
 @media (max-width: 1200px) {
 	.teams-detail {
 		gap: 2rem;
