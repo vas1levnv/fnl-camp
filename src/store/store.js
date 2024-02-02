@@ -21,6 +21,7 @@ import petropavlTeam from "@/assets/img/petropavlTeam.png";
 import sponsorKinopoisk from "@/assets/img/sponsor-kinopoisk.png"
 import sponsorBetboom from "@/assets/img/sponsor-betboom.png"
 import sponsorSportmaster from "@/assets/img/sponsor-sportmaster.png"
+//import sponsorVsporte from "@/assets/img/sponsor-vsporte.png"
 import playerRodina1 from "@/assets/img/players/playerRodina1.png"
 import playerRodina2 from "@/assets/img/players/playerRodina2.png"
 import playerRodina3 from "@/assets/img/players/playerRodina3.png"
@@ -120,42 +121,42 @@ export const store = createStore({
 				{
 					id: 1,
 					teamHome: {name: 'Енисей', src: enisei, isWhite: false},
-					date: '-',
+					date: '10.02.2024',
 					time: '-',
 					teamGuest: {name: 'Спартак-2', src: spartak, isWhite: false}
 				},
 				{
 					id: 2,
 					teamHome: {name: 'Родина', src: rodina, isWhite: false},
-					date: '-',
+					date: '12.02.2024',
 					time: '-',
 					teamGuest: {name: 'Кызыл-Жар', src: petropavl, isWhite: false}
 				},
 				{
 					id: 3,
 					teamHome: {name: 'Broke Boys', src: bb, isWhite: true},
-					date: '-',
+					date: '14.02.2024',
 					time: '-',
 					teamGuest: {name: 'Енисей', src: enisei, isWhite: false}
 				},
 				{
 					id: 4,
 					teamHome: {name: 'Кызыл-Жар', src: petropavl, isWhite: false},
-					date: '-',
+					date: '15.02.2024',
 					time: '-',
 					teamGuest: {name: 'Амкал', src: amkal, isWhite: true}
 				},
 				{
 					id: 5,
 					teamHome: {name: 'Спартак-2', src: spartak, isWhite: false},
-					date: '-',
+					date: '17.02.2024',
 					time: '-',
 					teamGuest: {name: 'Broke Boys', src: bb, isWhite: true}
 				},
 				{
 					id: 6,
 					teamHome: {name: 'Амкал', src: amkal, isWhite: true},
-					date: '-',
+					date: '17.02.2024',
 					time: '-',
 					teamGuest: {name: 'Родина', src: rodina, isWhite: false}
 				},
@@ -402,6 +403,12 @@ export const store = createStore({
 					src: sponsorSportmaster,
 					link: 'https://www.sportmaster.ru/promo/2149276/'
 				},
+				// {
+				// 	id: 4,
+				// 	text: 'Технический партнер',
+				// 	src: sponsorVsporte,
+				// 	link: 'https://vk.com/vsportelive'
+				// },
 			],
 			rules: [
 				{
