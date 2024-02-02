@@ -281,7 +281,6 @@ button {
 	}
 }
 
-
 .video {
 	display: flex;
 	align-items: center;
@@ -298,30 +297,36 @@ button {
 	position: relative;
 	overflow: hidden;
 }
+
 .video h3 {
 	margin-top: 7rem;
 	color: white;
 	font-size: 2.5rem;
 }
+
 .video-text {
 	margin-bottom: 0.75rem;
 	color: white;
 }
+
 .video-circle {
 	position: absolute;
 	top: -1%;
 	left: 0;
 	width: 100%;
 }
+
 @media (max-width: 1024px) {
 	.video-circle {
 		top: -0.5%;
 		height: 15%;
 	}
+
 	.video-circle svg {
 		height: 100%;
 	}
 }
+
 @media (max-width: 768px) {
 	.video h3 {
 		font-size: 2rem;
@@ -333,9 +338,11 @@ button {
 .rules {
 	padding: 7.5rem 0 3rem;
 }
+
 .rules h2 {
 	text-align: center;
 }
+
 .rules-list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -343,6 +350,7 @@ button {
 	position: relative;
 	top: -5rem;
 }
+
 .rules-item {
 	display: flex;
 	align-items: center;
@@ -354,76 +362,448 @@ button {
 	color: white;
 	padding: 3rem;
 }
+
 .rules-item:nth-child(2), .rules-item:nth-child(5) {
 	position: relative;
 	top: 6rem;
 }
+
 .rules-item__title {
 	font-size: 2.25rem;
 	font-weight: 700;
 }
+
 .rules-item__subtitle {
 	font-size: 1.5rem;
 	font-weight: 700;
 }
+
 .rules-item__body {
 	font-size: 1.25rem;
 	margin-top: 1rem;
 }
+
 @media (max-width: 1440px) {
 	.rules-list {
 		gap: 2rem;
 	}
+
 	.rules-item {
 		padding: 2rem;
 	}
+
 	.rules-item__title {
 		font-size: 1.5rem;
 	}
+
 	.rules-item__subtitle {
 		font-size: 1rem;
 	}
+
 	.rules-item__body {
 		font-size: 1rem;
 		margin-top: 0.5rem;
 	}
 }
+
 @media (max-width: 1200px) {
 	.rules h2 {
 		font-size: 2.5rem;
 	}
+
 	.rules-list {
 		gap: 1rem;
 	}
+
 	.rules-item__title {
 		font-size: 1.25rem;
 	}
 }
+
 @media (max-width: 1024px) {
 	.rules-list {
 		grid-template-columns: 1fr 1fr;
 		top: 0;
 		margin-top: 2rem;
 	}
+
 	.rules-item__title {
 		font-size: 1.25rem;
 	}
+
 	.rules-item:nth-child(2), .rules-item:nth-child(5) {
 		top: 0;
 	}
 }
+
 @media (max-width: 768px) {
 	.rules {
 		padding: 2rem 0;
 	}
+
 	.rules-list {
 		grid-template-columns: 1fr;
 		top: 0;
 		margin-top: 2rem;
 	}
+
 	.rules-item__title {
 		font-size: 1.125rem;
 	}
 }
- 
+
+.teams-info {
+	background: white;
+	color: black;
+	padding: 9.5rem 0;
+}
+
+@media (max-width: 1024px) {
+	.teams-info {
+		padding: 5rem 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.teams-info {
+		padding: 3rem 0 2rem;
+	}
+}
+
+.teams-detail {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 6rem;
+}
+
+@media (max-width: 1400px) {
+	.teams-detail {
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 1200px) {
+	.teams-detail {
+		gap: 2rem;
+		grid-template-columns: 1fr;
+	}
+}
+
+.teams-detail__title {
+	margin-bottom: 2.5rem;
+}
+
+.teams-detail-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+.teams-detail-item__img {
+	width: 125px;
+	height: 125px;
+}
+
+.teams-detail-item__img.white {
+	filter: brightness(0) saturate(100%);
+}
+
+.teams-detail-item__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.teams-detail-item__name {
+	flex: 1 1 0;
+	font-size: 2.25rem;
+	font-weight: 700;
+}
+
+@media (max-width: 1400px) {
+	.teams-detail__title {
+		font-size: 2.5rem;
+		margin-bottom: 2.5rem;
+	}
+}
+
+@media (max-width: 1200px) {
+	.teams-detail-item__name {
+		font-size: 1.75rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.teams-detail__title {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.teams-detail-item {
+		margin-bottom: 1.5rem;
+	}
+
+	.teams-detail-item__img {
+		width: 70px;
+		height: 70px;
+	}
+
+	.teams-detail-item__name {
+		font-size: 1.25rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.teams-detail-item {
+		display: grid;
+		grid-template-columns: auto 1fr;
+	}
+
+	.teams-detail-item__img {
+		grid-row: 0.3333333333;
+	}
+}
+
+.teams-table {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	margin-top: 3rem;
+}
+
+.teams-table h2 {
+	text-align: center;
+}
+
+.teams-table__text {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.teams-table__text span {
+	font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+	.teams-table {
+		gap: 1.5rem;
+	}
+
+	.teams-table__text {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.teams-table {
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.teams-table h2 {
+		font-size: 2rem;
+	}
+
+	.teams-table__text {
+		font-size: 1rem;
+	}
+}
+
+.teams-table-content {
+	width: 100%;
+	font-size: 1.5rem;
+	text-align: center;
+	border-collapse: collapse;
+	max-width: 1200px;
+	margin: 0 auto;
+	color: white;
+}
+
+.teams-table-content img {
+	width: 25px;
+	height: 25px;
+	object-fit: contain;
+}
+
+.teams-table-content .white {
+	filter: brightness(0) saturate(100%);
+}
+
+.teams-table-content .team-name {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	text-align: start;
+}
+
+.teams-table-content th {
+	font-size: 1.875rem;
+}
+
+.teams-table-content th:first-child {
+	text-align: start;
+}
+
+.teams-table-content th, .teams-table-content td {
+	padding: 0.5rem;
+}
+
+.teams-table-content th:first-child, .teams-table-content td:first-child {
+	padding-left: 5rem;
+}
+
+.teams-table-content th:last-child, .teams-table-content td:last-child {
+	padding-right: 5rem;
+}
+
+.teams-table-content th:not(:first-child), .teams-table-content td:not(:first-child) {
+	width: 60px;
+}
+
+.teams-table-content tr:nth-child(even) {
+	background: var(--orange);
+}
+
+.teams-table-content tr:nth-child(odd) {
+	background: none;
+	color: black;
+}
+
+.teams-table-content tr:first-child {
+	background: none;
+}
+
+@media (max-width: 1024px) {
+	.teams-table-content th {
+		font-size: 1.5rem;
+	}
+
+	.teams-table-content td {
+		font-size: 1rem;
+	}
+
+	.teams-table-content th, .teams-table-content td {
+		padding: 0.25rem;
+	}
+
+	.teams-table-content th:first-child, .teams-table-content td:first-child {
+		padding-left: 2.5rem;
+	}
+
+	.teams-table-content th:last-child, .teams-table-content td:last-child {
+		padding-right: 2.5rem;
+	}
+
+	.teams-table-content th:not(:first-child), .teams-table-content td:not(:first-child) {
+		width: 40px;
+	}
+}
+
+@media (max-width: 576px) {
+	.teams-table-content th {
+		font-size: 1rem;
+	}
+
+	.teams-table-content th:first-child, .teams-table-content td:first-child {
+		padding-left: 0.5rem;
+	}
+
+	.teams-table-content th:last-child, .teams-table-content td:last-child {
+		padding-right: 0.5rem;
+	}
+
+	.teams-table-content th:not(:first-child), .teams-table-content td:not(:first-child) {
+		width: 25px;
+	}
+}
+
+.calendar-section {
+	margin-top: 5rem;
+	text-align: center;
+}
+.calendar-section-wrapper {
+	max-width: 100%;
+	overflow-x: auto;
+}
+.calendar-section h2 {
+	margin-bottom: 1.25rem;
+}
+.calendar-section table {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+.calendar-section table tr:nth-child(even) {
+	background: var(--orange);
+	color: white;
+}
+.calendar-section table th {
+	font-size: 2.25rem;
+	font-weight: 500;
+	padding-bottom: 0.5rem;
+}
+.calendar-section table td {
+	text-align: center;
+	font-size: 1.875rem;
+	font-weight: 500;
+	padding: 0.5rem;
+}
+.calendar-section table td:first-child, .calendar-section table td:nth-child(2) {
+	text-align: start;
+	padding-left: 1.5rem;
+}
+.calendar-section table td:last-child {
+	padding-right: 1.5rem;
+}
+.calendar-section__team {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.calendar-section__team-img {
+	display: flex;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+}
+.calendar-section__team-img img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.calendar-section__team .white {
+	filter: brightness(0) saturate(100%);
+}
+@media (max-width: 1024px) {
+	.calendar-section table th {
+		font-size: 1.25rem;
+		padding-bottom: 0.25rem;
+	}
+	.calendar-section table td {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 768px) {
+	.calendar-section h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+	.calendar-section__data {
+		font-size: 1.5rem;
+	}
+	.calendar-section table th {
+		font-size: 1rem;
+	}
+	.calendar-section table td {
+		font-size: 1rem;
+	}
+	.calendar-section table td:first-child {
+		padding-left: 0.5rem;
+	}
+	.calendar-section table td:last-child {
+		padding-right: 0.5rem;
+	}
+}
  

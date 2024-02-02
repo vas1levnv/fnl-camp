@@ -1,5 +1,5 @@
 <template>
-	<table>
+	<table class="teams-table-content">
 		<tr>
 			<th>
 				{{ props.title }}
@@ -35,7 +35,8 @@ const props = defineProps(['title', 'teams'])
 </script>
 
 <style scoped lang="scss">
-table {
+
+.teams-table-content {
 	width: 100%;
 	font-size: 1.5rem;
 	text-align: center;
@@ -104,7 +105,7 @@ table {
 }
 
 @media (max-width: 1024px) {
-	table {
+	.teams-table-content {
 		th {
 			font-size: 1.5rem;
 		}
@@ -133,7 +134,7 @@ table {
 }
 
 @media (max-width: 576px) {
-	table {
+	.teams-table-content {
 		th {
 			font-size: 1rem;
 		}
