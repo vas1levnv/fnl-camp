@@ -1175,7 +1175,7 @@ button {
 
 .sponsors-section-list {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	padding: 5rem 0;
 	gap: 2rem;
 }
@@ -1196,6 +1196,13 @@ button {
 
 .sponsors-section-item__img img {
 	max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+	.sponsors-section-list {
+		grid-template-columns: 1fr 1fr;
+		padding: 2rem 0 3rem;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -1267,15 +1274,9 @@ button {
 
 @media (max-width: 768px) {
 	.footer-wrapper {
-		height: 20vh;
+		height: auto;
 		min-height: 200px;
 		padding: 2rem 0;
-	}
-}
-
-@media (max-width: 576px) {
-	.footer-wrapper {
-		height: auto;
 	}
 
 	.footer-sponsors {
