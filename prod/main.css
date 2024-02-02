@@ -44,7 +44,6 @@ body {
 #app {
 	width: 100%;
 	height: 100%;
-	overflow-x: hidden;
 }
 
 .container {
@@ -947,4 +946,87 @@ button {
 		font-size: 0.875rem;
 	}
 }
+
+.winners {
+	background: var(--orange);
+}
+.winners-wrapper {
+	padding: 5rem 0 10rem;
+	color: white;
+}
+.winners h2 {
+	text-align: center;
+	color: white;
+}
+.winners-teams {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 2rem;
+	margin-top: 3.25rem;
+}
+.winners-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.winners-item__icon {
+	position: relative;
+}
+.winners-item__icon-place {
+	position: absolute;
+	bottom: 5%;
+	left: -15%;
+	font-size: 4.5rem;
+	font-weight: 700;
+	line-height: 100%;
+}
+.winners-item__icon svg {
+	height: 120px;
+}
+.winners-item__years {
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin: 1.5rem 0 1rem;
+	white-space: nowrap;
+}
+.winners-item__name {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 2.75rem;
+	white-space: nowrap;
+}
+.winners-item img {
+	height: 9rem;
+}
+@media (max-width: 1440px) {
+	.winners-teams {
+		grid-template-columns: repeat(4, 1fr);
+		row-gap: 4rem;
+	}
+}
+@media (max-width: 1024px) {
+	.winners-wrapper {
+		padding: 3rem 0 5rem;
+	}
+	.winners-teams {
+		grid-template-columns: repeat(4, 1fr);
+		row-gap: 4rem;
+	}
+}
+@media (max-width: 768px) {
+	.winners-teams {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 2rem;
+	}
+	.winners h2 {
+		font-size: 2rem;
+	}
+	.winners-item__name {
+		margin-bottom: 1.5rem;
+	}
+	.winners-item:last-child {
+		grid-column: 0.3333333333;
+	}
+}
+ 
  
