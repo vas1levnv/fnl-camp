@@ -1283,4 +1283,24 @@ button {
 		gap: 1rem;
 	}
 }
+
+.move-to-top {
+	position: fixed;
+	bottom: 10rem;
+	right: 3rem;
+	cursor: pointer;
+	z-index: 10;
+}
+
+@media (max-width: 768px) {
+	.move-to-top {
+		bottom: 1rem;
+		right: 1rem;
+	}
+
+	.move-to-top svg {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+}
  

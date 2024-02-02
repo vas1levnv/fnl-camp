@@ -22,4 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		})
 	}))
+	
+	document.querySelector('.move-to-top').addEventListener('click', function() {
+		window.scrollTo({top: 0, behavior: 'smooth'});
+	})
 })
