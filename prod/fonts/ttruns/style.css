@@ -1,0 +1,71 @@
+@font-face {
+    font-weight: 900;
+    font-family: TT Runs ExtraBold;
+    src: url("TT Runs ExtraBold.otf");
+}
+@font-face {
+    font-weight: 900;
+    font-family: TT Runs ExtraBold Italic;
+    src: url("TT Runs ExtraBold Italic.otf");
+}
+@font-face {
+    font-family: TT Runs Medium;
+    src: url("TT Runs Medium.otf");
+}
+@font-face {
+    font-family: TT Runs Medium Italic;
+    src: url("TT Runs Medium Italic.otf");
+}
+@font-face {
+    font-family: TT Runs Thin;
+    src: url("TT Runs Thin.otf");
+}
+@font-face {
+    font-family: TT Runs Thin Italic;
+    src: url("TT Runs Thin Italic.otf");
+}
+@font-face {
+    font-family: TT Runs Italic;
+    src: url("TT Runs Italic.otf");
+}
+@font-face {
+    font-family: TT Runs Light Italic;
+    src: url("TT Runs Light Italic.otf");
+}
+@font-face {
+    font-family: TT Runs Light;
+    src: url("TT Runs Light.otf");
+}
+@font-face {
+    font-family: TT Runs ExtraLight;
+    src: url("TT Runs ExtraLight.otf");
+}
+@font-face {
+    font-family: TT Runs ExtraLight Italic;
+    src: url("TT Runs ExtraLight Italic.otf");
+}
+@font-face {
+    font-family: TT Runs DemiBold Italic;
+    src: url("TT Runs DemiBold Italic.otf");
+}
+@font-face {
+    font-family: TT Runs DemiBold;
+    src: url("TT Runs DemiBold.otf");
+}
+@font-face {
+    font-family: TT Runs Bold Italic;
+    src: url("TT Runs Bold Italic.otf");
+}
+@font-face {
+    font-family: TT Runs Bold;
+    src: url("TT Runs Bold.otf");
+}
+@font-face {
+    font-family: TT Runs Black Italic;
+    src: url("TT Runs Black Italic.otf");
+}
+@font-face {
+    font-family: TT Runs Black;
+    src: url("TT Runs Black.otf");
+}
+

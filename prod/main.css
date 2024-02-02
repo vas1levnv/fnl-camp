@@ -1,0 +1,429 @@
+@import "./fonts/ttruns/stylesheet.css";
+
+:root {
+	--linear-gradient: radial-gradient(149.6% 157.97% at -8.9% 0%, #EA571C 0%, #EA571C 60%, #B9CE00 99.97%, #B9CE00 100%);
+	--orange: #EA571C;
+}
+
+h2 {
+	font-size: 4rem;
+	font-weight: 700;
+	color: var(--orange);
+}
+
+@media (max-width: 1024px) {
+	h2 {
+		font-size: 2.5rem;
+	}
+}
+
+.orange-text {
+	color: var(--orange);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	width: 100vw;
+	font-family: "TT Runs", sans-serif;
+	overflow-x: hidden;
+	background: white;
+	color: black;
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 1720px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 1rem;
+	}
+}
+
+button {
+	border: none;
+	outline: none;
+	background: var(--orange);
+	color: white;
+	padding: 1rem 2.5rem;
+	border-radius: 1rem;
+	font-size: 1.25rem;
+	font-weight: 400;
+	cursor: pointer;
+	white-space: nowrap;
+	font-family: "TT Runs", sans-serif;
+}
+
+@media (max-width: 768px) {
+	button {
+		padding: 0.5rem 1rem;
+	}
+}
+
+.teams {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	color: white;
+}
+
+.teams-bg {
+	margin-bottom: -6px;
+	width: 100%;
+}
+
+.teams-bg img {
+	max-width: 100%;
+	width: 100%;
+}
+
+.teams-text {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	max-width: 850px;
+	margin: 0 auto 5rem;
+}
+
+.teams-wrapper {
+	position: relative;
+	width: 100%;
+	background: var(--orange);
+	padding-bottom: 6rem;
+}
+
+.teams-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 7.5rem 0 2rem;
+}
+
+.teams-list__left, .teams-list__right {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	width: 30%;
+}
+
+.teams-list__left img, .teams-list__right img {
+	width: 100%;
+}
+
+.teams-icon {
+	position: absolute;
+	top: -30%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20vw;
+}
+
+.teams-icon svg {
+	width: 100%;
+}
+
+.teams-text {
+	text-align: center;
+	max-width: 850px;
+	margin: 5rem auto 5rem;
+}
+
+.teams-links {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 2.5rem;
+	row-gap: 1rem;
+}
+
+.teams-links-item {
+	line-height: 100%;
+	width: min-content;
+	white-space: normal;
+	background: white;
+	color: var(--orange);
+}
+
+@media (max-width: 1440px) {
+	.teams {
+		background-position: top;
+	}
+
+	.teams-icon {
+		top: -20%;
+		width: 200px;
+	}
+
+	.teams-links {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.teams-links-item {
+		width: auto;
+	}
+}
+
+@media (max-width: 1024px) {
+	.teams-list {
+		flex-direction: column;
+		padding: 10rem 0 2rem;
+	}
+
+	.teams-list__left, .teams-list__right {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.teams-list__left img, .teams-list__right img {
+		width: auto;
+		max-width: 100%;
+		object-fit: contain;
+		max-height: 100%;
+	}
+
+	.teams-list__left {
+		margin-bottom: 2rem;
+	}
+
+	.teams-text {
+		font-size: 1.5rem;
+	}
+
+	.teams-img {
+		display: flex;
+		justify-content: center;
+		max-height: 100px;
+	}
+
+	.teams-icon {
+		top: -23%;
+		width: 200px;
+	}
+}
+
+@media (max-width: 768px) {
+	.teams-wrapper {
+		padding-bottom: 3rem;
+	}
+
+	.teams-list {
+		padding-top: 7.5rem;
+	}
+
+	.teams-icon {
+		top: -250px;
+		width: 150px;
+	}
+
+	.teams-text {
+		font-size: 1rem;
+		margin: 2rem 0;
+	}
+
+	.teams-links {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 576px) {
+	.teams-list {
+		padding: 5rem 0 2rem;
+	}
+
+	.teams-list__left, .teams-list__right {
+		grid-template-columns: 3fr 4fr 3fr;
+	}
+
+	.teams-bg {
+		height: 250px;
+	}
+
+	.teams-bg img {
+		height: 100%;
+		width: auto;
+		object-fit: cover;
+	}
+
+	.teams-img {
+		max-height: 70px;
+	}
+
+	.teams-icon {
+		top: -275px;
+		width: 125px;
+	}
+
+	.teams-links {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+
+.video {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	min-height: 800px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 0 2rem;
+	background-position: center;
+	background-image: url(./img/kinopoisk-bg.png);
+	position: relative;
+	overflow: hidden;
+}
+.video h3 {
+	margin-top: 7rem;
+	color: white;
+	font-size: 2.5rem;
+}
+.video-text {
+	margin-bottom: 0.75rem;
+	color: white;
+}
+.video-circle {
+	position: absolute;
+	top: -1%;
+	left: 0;
+	width: 100%;
+}
+@media (max-width: 1024px) {
+	.video-circle {
+		top: -0.5%;
+		height: 15%;
+	}
+	.video-circle svg {
+		height: 100%;
+	}
+}
+@media (max-width: 768px) {
+	.video h3 {
+		font-size: 2rem;
+		max-width: 100%;
+		margin: 3rem 0 1rem;
+	}
+}
+
+.rules {
+	padding: 7.5rem 0 3rem;
+}
+.rules h2 {
+	text-align: center;
+}
+.rules-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	position: relative;
+	top: -5rem;
+}
+.rules-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	background: var(--linear-gradient);
+	border-radius: 2rem;
+	color: white;
+	padding: 3rem;
+}
+.rules-item:nth-child(2), .rules-item:nth-child(5) {
+	position: relative;
+	top: 6rem;
+}
+.rules-item__title {
+	font-size: 2.25rem;
+	font-weight: 700;
+}
+.rules-item__subtitle {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.rules-item__body {
+	font-size: 1.25rem;
+	margin-top: 1rem;
+}
+@media (max-width: 1440px) {
+	.rules-list {
+		gap: 2rem;
+	}
+	.rules-item {
+		padding: 2rem;
+	}
+	.rules-item__title {
+		font-size: 1.5rem;
+	}
+	.rules-item__subtitle {
+		font-size: 1rem;
+	}
+	.rules-item__body {
+		font-size: 1rem;
+		margin-top: 0.5rem;
+	}
+}
+@media (max-width: 1200px) {
+	.rules h2 {
+		font-size: 2.5rem;
+	}
+	.rules-list {
+		gap: 1rem;
+	}
+	.rules-item__title {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 1024px) {
+	.rules-list {
+		grid-template-columns: 1fr 1fr;
+		top: 0;
+		margin-top: 2rem;
+	}
+	.rules-item__title {
+		font-size: 1.25rem;
+	}
+	.rules-item:nth-child(2), .rules-item:nth-child(5) {
+		top: 0;
+	}
+}
+@media (max-width: 768px) {
+	.rules {
+		padding: 2rem 0;
+	}
+	.rules-list {
+		grid-template-columns: 1fr;
+		top: 0;
+		margin-top: 2rem;
+	}
+	.rules-item__title {
+		font-size: 1.125rem;
+	}
+}
+ 
+ 
