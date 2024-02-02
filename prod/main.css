@@ -806,4 +806,145 @@ button {
 		padding-right: 0.5rem;
 	}
 }
+
+.descr {
+	position: relative;
+}
+.descr-wrapper {
+	padding: 6.25rem 0;
+}
+.descr-circle {
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	transform: rotate(180deg);
+}
+@media (max-width: 1024px) {
+	.descr-wrapper {
+		padding: 4rem 0 8rem;
+	}
+	.descr-circle {
+		bottom: -5px;
+		height: 100px;
+	}
+	.descr-circle svg {
+		height: 100%;
+	}
+}
+@media (max-width: 768px) {
+	.descr-wrapper {
+		padding: 2rem 0 6rem;
+	}
+}
+
+.descr-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 6.5rem;
+	font-weight: 500;
+	font-size: 1.5rem;
+	gap: 5rem;
+}
+.descr-item__img {
+	position: relative;
+}
+.descr-item__img img {
+	width: 100%;
+}
+.descr-item__img-bg {
+	position: absolute;
+	bottom: 10px;
+	right: 50%;
+	width: 100%;
+	height: 50%;
+	z-index: -1;
+	transform: scale(-1, 1);
+}
+.descr-item__img-bg svg {
+	height: 100%;
+}
+.descr-item:nth-child(2n) {
+	flex-direction: row-reverse;
+}
+.descr-item:nth-child(2n) .descr-item__img-bg {
+	right: auto;
+	left: 50%;
+	transform: scale(1, 1);
+}
+.descr-item__content {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+.descr-item__name {
+	font-size: 2.25rem;
+}
+.descr-item__achievements ul {
+	margin-top: 1.25rem;
+	padding-left: 1.25rem;
+}
+.descr-item__persons-list {
+	display: flex;
+	gap: 1.25rem;
+	margin-top: 1.25rem;
+}
+.descr-item__persons-name {
+	margin: 0.5rem auto 0;
+	width: 100px;
+	text-align: center;
+	font-size: 1rem;
+}
+.descr-item .orange-text {
+	font-weight: 700;
+}
+@media (max-width: 1200px) {
+	.descr-item {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 1024px) {
+	.descr-item {
+		flex-direction: column;
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+	.descr-item:nth-child(2n) {
+		flex-direction: column;
+	}
+	.descr-item__img {
+		max-width: 300px;
+	}
+	.descr-item__content {
+		width: 100%;
+	}
+}
+@media (max-width: 768px) {
+	.descr-item__persons-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+		margin-top: 1.25rem;
+	}
+}
+@media (max-width: 576px) {
+	.descr-item__persons-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 0.5rem;
+	}
+	.descr-item__persons-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.descr-item__persons-item img {
+		width: 100%;
+	}
+	.descr-item__persons-name {
+		font-size: 0.875rem;
+	}
+}
  
