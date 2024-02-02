@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+	<link rel="icon" href="./favicon.ico">
 	<link rel="stylesheet" href="./main.css">
 	<title>ФНЛ CAMP</title>
 </head>
@@ -97,17 +97,17 @@
 					2018 годах.
 				</div>
 				<div class="teams-links">
-					<button class="teams-links-item">Трансляция</button>
-					<button class="teams-links-item">Правила</button>
-					<button class="teams-links-item">Команды</button>
-					<button class="teams-links-item">Турнирная таблица</button>
-					<button class="teams-links-item">Календарь</button>
-					<button class="teams-links-item">Стадион</button>
+					<button class="teams-links-item" data-src="video">Трансляция</button>
+					<button class="teams-links-item" data-src="rules">Правила</button>
+					<button class="teams-links-item" data-src="teams">Команды</button>
+					<button class="teams-links-item" data-src="table">Турнирная таблица</button>
+					<button class="teams-links-item" data-src="calendar">Календарь</button>
+					<button class="teams-links-item" data-src="stadium">Стадион</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<a href="https://hd.kinopoisk.ru/sport/" target="_blank" class="video">
+	<a href="https://hd.kinopoisk.ru/sport/" target="_blank" data-anchors="video" class="video">
 		<div class="video-circle">
 			<svg viewBox="0 0 1920 152" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<circle cx="1910" cy="10" r="10" transform="rotate(-180 1910 10)" fill="#EA571C"/>
@@ -1079,7 +1079,7 @@
 		<div class="video-text">смотреть на</div>
 		<img src="./img/kinopoisk-color.png" alt="kinopoisk-icon">
 	</a>
-	<div class="rules">
+	<div class="rules" data-anchors="rules">
 		<div class="container">
 			<div class="rules-wrapper">
 				<h2>Правила</h2>
@@ -1128,7 +1128,7 @@
 	</div>
 	<div class="teams-info">
 		<div class="container">
-			<div class="teams-detail" ref="teams">
+			<div class="teams-detail" data-anchors="teams">
 				<div class="teams-detail-list">
 					<h2 class="teams-detail__title">Первая группа</h2>
 					<div class="teams-detail-item">
@@ -1136,21 +1136,21 @@
 							<img src="./img/Enisei.png" alt="Enisei">
 						</div>
 						<div class="teams-detail-item__name">Енисей</div>
-						<button>О команде</button>
+						<button data-teams="enisei">О команде</button>
 					</div>
 					<div class="teams-detail-item">
 						<div class="teams-detail-item__img">
 							<img src="./img/spartak.png" alt="Спартак-2">
 						</div>
 						<div class="teams-detail-item__name">Спартак-2</div>
-						<button>О команде</button>
+						<button data-teams="spartak">О команде</button>
 					</div>
 					<div class="teams-detail-item">
 						<div class="teams-detail-item__img white">
 							<img src="./img/bb.png" alt="Broke Boys">
 						</div>
 						<div class="teams-detail-item__name">Broke Boys</div>
-						<button>О команде</button>
+						<button data-teams="bb">О команде</button>
 					</div>
 				</div>
 				<div class="teams-detail-list">
@@ -1160,25 +1160,25 @@
 							<img src="./img/rodina.png" alt="Родина">
 						</div>
 						<div class="teams-detail-item__name">Родина</div>
-						<button>О команде</button>
+						<button data-teams="rodina">О команде</button>
 					</div>
 					<div class="teams-detail-item">
 						<div class="teams-detail-item__img white">
 							<img src="./img/Amkal.png" alt="Амкал">
 						</div>
 						<div class="teams-detail-item__name">Амкал</div>
-						<button>О команде</button>
+						<button data-teams="amkal">О команде</button>
 					</div>
 					<div class="teams-detail-item">
 						<div class="teams-detail-item__img">
 							<img src="./img/petropavl.png" alt="Кызыл-Жар">
 						</div>
 						<div class="teams-detail-item__name">Кызыл-Жар</div>
-						<button>О команде</button>
+						<button data-teams="petropavl">О команде</button>
 					</div>
 				</div>
 			</div>
-			<div class="teams-table" ref="table">
+			<div class="teams-table" data-anchors="table">
 				<h2>Турнирная таблица</h2>
 				<table class="teams-table-content">
 					<tr>
@@ -1294,7 +1294,7 @@
 					<span>П</span>-Поражения, <span>Г</span>-Голы, <span>О</span>-Очки
 				</div>
 			</div>
-			<div class="calendar-section" ref="calendar">
+			<div class="calendar-section" data-anchors="calendar">
 				<h2>Расписание игр</h2>
 				<div class="calendar-section-wrapper">
 					<table>
@@ -1475,7 +1475,7 @@
 		<div class="container">
 			<div class="descr-wrapper">
 				<div class="descr-list">
-					<div class="descr-item" ref="targetTeam">
+					<div class="descr-item" data-detail="rodina">
 						<div class="descr-item__img">
 							<img src="./img/rodinaTeam.png" alt="Родина">
 							<div class="descr-item__img-bg">
@@ -2768,7 +2768,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="descr-item" ref="targetTeam">
+					<div class="descr-item" data-detail="enisei">
 						<div class="descr-item__img">
 							<img src="./img/eniseiTeam.png" alt="Енисей">
 							<div class="descr-item__img-bg">
@@ -4061,7 +4061,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="descr-item" ref="targetTeam">
+					<div class="descr-item" data-detail="spartak" ref="targetTeam">
 						<div class="descr-item__img">
 							<img src="./img/spartakTeam.png" alt="Спартак-2">
 							<div class="descr-item__img-bg">
@@ -5350,7 +5350,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="descr-item" ref="targetTeam">
+					<div class="descr-item" data-detail="amkal">
 						<div class="descr-item__img">
 							<img src="./img/amkalTeam.png" alt="Амкал">
 							<div class="descr-item__img-bg">
@@ -6643,7 +6643,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="descr-item" ref="targetTeam">
+					<div class="descr-item" data-detail="bb">
 						<div class="descr-item__img">
 							<img src="./img/brokeboysTeam.png" alt="Broke Boys">
 							<div class="descr-item__img-bg">
@@ -7938,7 +7938,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="descr-item" ref="targetTeam">
+					<div class="descr-item" data-detail="petropavl">
 						<div class="descr-item__img">
 							<img src="./img/petropavlTeam.png" alt="Кызыл-Жар">
 							<div class="descr-item__img-bg">
@@ -10385,7 +10385,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="map" ref="stadium">
+	<div class="map" data-anchors="stadium">
 		<div class="map-content">
 			<div>
 				<svg viewBox="0 0 53 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10477,5 +10477,6 @@
 		</div>
 	</footer>
 </div>
+<script src="./script.js"></script>
 </body>
 </html>
